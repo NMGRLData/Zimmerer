@@ -5,7 +5,7 @@ loading script "jan_co2.py"
 loading script "jan_pump_extraction_line.py"
 testing...
 no interpolation path defined
-executed snippet estimated_duration=539.8, duration=0.000187873840332
+executed snippet estimated_duration=539.8, duration=0.000202894210815
 script duration name:unknown400_120 seconds:540.0
 loading script "jan_unknown400_120.py"
 loading script "jan_pump_ms.py"
@@ -13,7 +13,7 @@ loading script "jan_co2.py"
 loading script "jan_pump_extraction_line.py"
 testing...
 no interpolation path defined
-executed snippet estimated_duration=0, duration=3.2901763916e-05
+executed snippet estimated_duration=0, duration=2.19345092773e-05
 loading script "jan_unknown400_120.py"
 loading script "jan_pump_ms.py"
 loading script "jan_co2.py"
@@ -23,12 +23,12 @@ no interpolation path defined
 calculate duration
 testing...
 no interpolation path defined
-executed snippet estimated_duration=0, duration=4.31537628174e-05
+executed snippet estimated_duration=0, duration=4.60147857666e-05
 calculate duration
 testing...
 no interpolation path defined
 executed snippet estimated_duration=0, duration=8.79764556885e-05
-executed snippet estimated_duration=0.0, duration=0.00196385383606
+executed snippet estimated_duration=0.0, duration=0.00217914581299
 script duration name:co2 seconds:0.0
 loading script "jan_unknown400_120.py"
 loading script "jan_pump_ms.py"
@@ -40,12 +40,12 @@ calculate duration
 testing...
 no interpolation path defined
 executed snippet estimated_duration=4.0, duration=0.000134944915771
-executed snippet estimated_duration=4.0, duration=0.00104117393494
+executed snippet estimated_duration=4.0, duration=0.00104284286499
 Script duration 540.0
 Run total estimated duration= 541.000
 run duration: 0:09:01
 doing event level: 2
-22:47:53 -- Setting default integration. t=1.048576
+07:13:44 -- Setting default integration. t=1.048576
 setting integration time = 1.048576
 SetIntegrationTime 1.048576 ===>> OK
 ----------------- start -----------------
@@ -67,23 +67,23 @@ $$$$$$$$$$$$$$$ auto_save_detector_ic=False
 loading queue conditionals pre_run_terminations
 loading system conditionals pre_run_terminations
 loading conditionals from /Users/jan/PychronDev/setupfiles/spectrometer/default_conditionals.yaml
-22:47:53 -- ******* Pre Extraction Check *******
+07:13:45 -- ******* Pre Extraction Check *******
 Get a measurement from the spectrometer
-Pre Extraction Termination data. keys=H2,H1,AX,L1,L2,CDD, signals=-0.04319,0.05381,0.11928,-0.03962,0.12916,0.00415
-22:47:53 -- testing system defined conditionals
+Pre Extraction Termination data. keys=H2,H1,AX,L1,L2,CDD, signals=-0.11538,24.58164,3.77291,0.02369,0.12861,0.05533
+07:13:45 -- testing system defined conditionals
 Checking default pre extraction terminations n=2
 testing CDD
 evaluate ot="CDD.inactive" t="CDD", ctx="{'CDD': False}"
 GetDeflection CDD ===>> 50
 testing CDD==2000
 evaluate ot="CDD.deflection==2000" t="CDD==2000", ctx="{'CDD': 50.0}"
-22:47:53 -- ******* Pre Extraction Check Passed *******
+07:13:45 -- ******* Pre Extraction Check Passed *******
 =================================================================================
-22:47:53 -- stopping status monitor
+07:13:45 -- stopping status monitor
 stop 4939231888
 Status monitor stopped
 Status monitor finished
-22:47:54 -- starting status monitor
+07:13:46 -- starting status monitor
 start 4939231888
 StatusMonitor period=1. Frequencies(state=2, checksum=3, lock=5, owner=5)
 get handler 129.138.12.153,1061 3
@@ -91,9 +91,9 @@ get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 start extraction
 do extraction
-Analysis started at 22:47:56.445371
+Analysis started at 07:13:48.093486
 Extraction Started jan_co2.py
-22:47:56 -- ******* Extraction Started jan_co2.py *******
+07:13:48 -- ******* Extraction Started jan_co2.py *******
 state changed from not run to extraction
 DO EXTRACTION <pychron.extraction_line.pyscript_runner.RemotePyScriptRunner object at 0x1293402f0>
 testing...
@@ -101,21 +101,20 @@ no interpolation path defined
 calculate duration
 testing...
 no interpolation path defined
-executed snippet estimated_duration=0, duration=4.57763671875e-05
+executed snippet estimated_duration=0, duration=4.79221343994e-05
 calculate duration
 testing...
 no interpolation path defined
-executed snippet estimated_duration=0, duration=9.20295715332e-05
-executed snippet estimated_duration=100.0, duration=0.00242805480957
+executed snippet estimated_duration=0, duration=8.79764556885e-05
+executed snippet estimated_duration=100.0, duration=0.00262808799744
 Jan CO2 laser analysis
 doing GOSUB
 testing...
 no interpolation path defined
-executed snippet estimated_duration=0, duration=4.60147857666e-05
+executed snippet estimated_duration=0, duration=4.91142272949e-05
 Waiting for CO2 access
 wait ('FelixCO2Flag', 0) {}
 waiting for FelixCO2Flag = 0
-get handler 129.138.12.153,1061 3
 Read FelixCO2Flag ===>> 0
 finished waiting
 CO2 free
@@ -131,13 +130,13 @@ Set JanCO2Flag 1 ===>> OK
 JanCO2Flag acquired
 set extraction state False (0.75, 'red', 1.5)
 CO2 acquired
-executed snippet estimated_duration=0, duration=0.0188248157501
+executed snippet estimated_duration=0, duration=0.0180389881134
 WaitForCO2Access.py completed successfully
 gosub finished
 doing GOSUB
 testing...
 no interpolation path defined
-executed snippet estimated_duration=0, duration=0.00019097328186
+executed snippet estimated_duration=0, duration=9.70363616943e-05
 Prepare for CO2 analysis
 close () {'description': 'Jan Inlet'}
 close name=--- desc=Jan Inlet
@@ -151,7 +150,7 @@ Close R ===>> OK
 get handler 129.138.12.153,1061 3
 GetIndicatorState R ===>> False
 change switch state (True, True)
-22:47:56 -- CLOSE  VALVE-R (Jan Inlet)
+07:13:48 -- CLOSE  VALVE-R (Jan Inlet)
 -------------------------- close None (Jan Inlet) result=[(True, True)]
 action=close, ok=True, locked=[False]
 open () {'description': 'Jan Ion Pump'}
@@ -166,7 +165,7 @@ Open O ===>> OK
 get handler 129.138.12.153,1061 3
 GetIndicatorState O ===>> OK
 change switch state (True, True)
-22:47:57 -- OPEN   VALVE-O (Jan Ion Pump)
+07:13:48 -- OPEN   VALVE-O (Jan Ion Pump)
 -------------------------- open None (Jan Ion Pump) result=[(True, True)]
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
@@ -185,7 +184,7 @@ Close L ===>> OK
 get handler 129.138.12.153,1061 3
 GetIndicatorState L ===>> False
 change switch state (True, True)
-22:47:58 -- CLOSE  VALVE-L (Microbone to Minibone)
+07:13:49 -- CLOSE  VALVE-L (Microbone to Minibone)
 -------------------------- close None (Microbone to Minibone) result=[(True, True)]
 action=close, ok=True, locked=[False]
 open () {'description': 'Microbone to Turbo'}
@@ -200,7 +199,7 @@ Open U ===>> OK
 get handler 129.138.12.153,1061 3
 GetIndicatorState U ===>> OK
 change switch state (True, True)
-22:47:58 -- OPEN   VALVE-U (Microbone to Turbo)
+07:13:50 -- OPEN   VALVE-U (Microbone to Turbo)
 -------------------------- open None (Microbone to Turbo) result=[(True, True)]
 action=open, ok=True, locked=[False]
 open () {'description': 'Microbone to Inlet Pipette'}
@@ -215,7 +214,7 @@ Open S ===>> OK
 get handler 129.138.12.153,1061 3
 GetIndicatorState S ===>> OK
 change switch state (True, True)
-22:47:59 -- OPEN   VALVE-S (Microbone to Inlet Pipette)
+07:13:50 -- OPEN   VALVE-S (Microbone to Inlet Pipette)
 -------------------------- open None (Microbone to Inlet Pipette) result=[(True, True)]
 action=open, ok=True, locked=[False]
 open () {'description': 'Microbone to Getter D-50'}
@@ -231,7 +230,7 @@ get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 GetIndicatorState K ===>> OK
 change switch state (True, True)
-22:47:59 -- OPEN   VALVE-K (Microbone to Getter D-50)
+07:13:51 -- OPEN   VALVE-K (Microbone to Getter D-50)
 -------------------------- open None (Microbone to Getter D-50) result=[(True, True)]
 action=open, ok=True, locked=[False]
 open () {'description': 'Microbone to Getter NP-10'}
@@ -246,7 +245,7 @@ Open M ===>> OK
 get handler 129.138.12.153,1061 3
 GetIndicatorState M ===>> OK
 change switch state (True, True)
-22:48:00 -- OPEN   VALVE-M (Microbone to Getter NP-10)
+07:13:51 -- OPEN   VALVE-M (Microbone to Getter NP-10)
 -------------------------- open None (Microbone to Getter NP-10) result=[(True, True)]
 action=open, ok=True, locked=[False]
 close () {'description': 'CO2 Laser to Felix'}
@@ -271,7 +270,7 @@ Open A ===>> OK
 get handler 129.138.12.153,1061 3
 GetIndicatorState A ===>> OK
 change switch state (True, True)
-22:48:00 -- OPEN   VALVE-A (CO2 Laser to Jan)
+07:13:52 -- OPEN   VALVE-A (CO2 Laser to Jan)
 -------------------------- open None (CO2 Laser to Jan) result=[(True, True)]
 get handler 129.138.12.153,1061 3
 action=open, ok=True, locked=[False]
@@ -287,10 +286,10 @@ Open T ===>> OK
 get handler 129.138.12.153,1061 3
 GetIndicatorState T ===>> OK
 change switch state (True, True)
-22:48:01 -- OPEN   VALVE-T (Microbone to CO2 Laser)
+07:13:52 -- OPEN   VALVE-T (Microbone to CO2 Laser)
 -------------------------- open None (Microbone to CO2 Laser) result=[(True, True)]
 action=open, ok=True, locked=[False]
-executed snippet estimated_duration=0, duration=5.02512598038
+executed snippet estimated_duration=0, duration=5.03282809258
 PrepareForCO2Analysis.py completed successfully
 gosub finished
 set_motor ('beam', '1.25') {}
@@ -314,18 +313,10 @@ get handler 129.138.12.153,1061 3
 get handler 129.138.12.133,1063 3
 GetDriveMoving ===>> False
 get handler 129.138.12.133,1063 3
-GetDriveMoving ===>> OK
-get handler 129.138.12.153,1061 3
-set states for children of H. state=False
-refresh_canvas_needed fired
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.133,1063 3
-GetDriveMoving ===>> OK
-get handler 129.138.12.133,1063 3
-GetDriveMoving ===>> OK
-get handler 129.138.12.133,1063 3
 GetDriveMoving ===>> False
 Block completed
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
 get handler 129.138.12.133,1063 3
 GetAutoCorrecting ===>> False
 get handler 129.138.12.133,1063 3
@@ -341,25 +332,12 @@ SLEEP 5.0
 block started
 WaitControl setup for 5.0  
 get handler 129.138.12.153,1061 3
-set states for children of C. state=True
-set states for children of B. state=True
-refresh_canvas_needed fired
-get handler 129.138.12.153,1061 3
-State checksums do not match. Local:658581687 Remote:-161856681
-State checksum failed
-get handler 129.138.12.153,1061 3
-set states for children of D. state=True
-set states for children of P. state=True
-refresh_canvas_needed fired
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
-set states for children of I. state=False
-set states for children of Q. state=True
-refresh_canvas_needed fired
 get handler 129.138.12.153,1061 3
 Join finished
-block finished. duration 5.02079701424
+block finished. duration 5.02645206451
 close () {'description': 'Microbone to Turbo'}
 close name=--- desc=Microbone to Turbo
 checking ownership. requestor=129.138.12.150
@@ -372,8 +350,10 @@ Close U ===>> OK
 get handler 129.138.12.153,1061 3
 GetIndicatorState U ===>> False
 change switch state (True, True)
-22:48:10 -- CLOSE  VALVE-U (Microbone to Turbo)
+07:14:01 -- CLOSE  VALVE-U (Microbone to Turbo)
 -------------------------- close None (Microbone to Turbo) result=[(True, True)]
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
 action=close, ok=True, locked=[False]
 enable laser
 enable () {}
@@ -384,16 +364,16 @@ Enable ===>> OK
 begin interval
 BEGIN INTERVAL Interval 1 waiting for 30.0
 block started
+set extract to 4.5
 WaitControl setup for 30.0  
-set extract to 1.0
-extract (1.0,) {}
+extract (4.5,) {}
 get handler 129.138.12.133,1063 3
 GetPosition ===>> -9.96950,-3.98780,1.00000
-set extraction state FusionsCO2 ON! 1.0(watts) (0.75, 'red', 1.5)
-extract sample to 1.0 (watts)
+set extraction state FusionsCO2 ON! 4.5(watts) (0.75, 'red', 1.5)
+extract sample to 4.5 (watts)
 set laser output
 get handler 129.138.12.133,1063 3
-SetLaserOutput 1.0,watts ===>> OK
+SetLaserOutput 4.5,watts ===>> OK
 executing pattern triangle.lp
 execute_pattern ('triangle.lp',) {}
 executing pattern triangle.lp
@@ -494,7 +474,7 @@ COMPLETE INTERVAL waiting for Interval 1 to complete
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 Join finished
-block finished. duration 30.1456408501
+block finished. duration 30.077352047
 Interval 1 finished
 end_extract () {}
 ending extraction. set laser power to 0
@@ -549,8 +529,8 @@ get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 Join finished
-block finished. duration 30.1553270817
-executed snippet estimated_duration=166.5, duration=75.4422650337
+block finished. duration 30.0864839554
+executed snippet estimated_duration=166.5, duration=74.4156110287
 jan_co2.py completed successfully
 get handler 129.138.12.133,1063 3
 GetAchievedOutput ===>> No Response
@@ -567,43 +547,26 @@ persistence save - dvc
 no extraction position for 140
 not connected to db mysql://janexp@129.138.12.160/labspy
 get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
 Enviromentals: {'lab_humiditys': [{'device': 'EnvironmentalMonitor',
                     'name': 'Lab Hum.',
-                    'pub_date': '2017-09-05T22:46:08',
+                    'pub_date': '2017-09-06T05:44:35',
                     'title': 'iServer Hum.',
-                    'value': 42.0}],
+                    'value': 46.2}],
  'lab_pneumatics': [{'device': 'AirPressure',
                      'name': 'Pressure',
-                     'pub_date': '2017-09-05T22:48:40',
+                     'pub_date': '2017-09-06T07:14:18',
                      'title': None,
-                     'value': 103.05},
+                     'value': 110.7},
                     {'device': 'AirPressure2',
                      'name': 'Pressure2',
-                     'pub_date': '2017-09-05T22:48:43',
+                     'pub_date': '2017-09-06T07:14:25',
                      'title': None,
-                     'value': 105.0283}],
- 'lab_temperatures': [{'device': 'Coldfinger',
-                       'name': 'ColdFinger Temp.',
-                       'pub_date': '2017-09-05T19:19:37',
-                       'title': None,
-                       'value': -195.0},
-                      {'device': 'EnvironmentalMonitor',
-                       'name': 'Lab Temp.',
-                       'pub_date': '2017-09-05T22:27:56',
-                       'title': 'iServer Temp.',
-                       'value': 73.4},
-                      {'device': 'Chiller',
-                       'name': 'Coolant Temp.',
-                       'pub_date': '2017-09-05T22:28:40',
-                       'title': None,
-                       'value': 18.0}]}
+                     'value': 113.1013}],
+ 'lab_temperatures': []}
 Extraction Finished
-22:49:14 -- ******* Extraction Finished *******
+07:15:04 -- ******* Extraction Finished *******
 no overlap. not waiting for min ms pumptime
-22:49:14 -- Sending spectrometer configuration
+07:15:04 -- Sending spectrometer configuration
 ======== Sending configuration ========
 SetDeflection CDD,50.0 ===>> OK
 SetDeflection H2,0.0 ===>> OK
@@ -619,7 +582,7 @@ SetElectronEnergy 75.08 ===>> OK
 SetYSymmetry -2.81 ===>> OK
 SetIonCounterVoltage 1590.0 ===>> OK
 send trap current 200.0
-GetParameter Trap Current Readback ===>> 198.035158395898
+GetParameter Trap Current Readback ===>> 198.482695477019
 SetParameter Trap Current Set,200.0 ===>> OK
 updating mftable name mftable
 Using mftable located at /Users/jan/PychronDev/setupfiles/spectrometer/mftables/mftable.csv
@@ -638,20 +601,19 @@ get initial guess parabolic
 ======== Configuration Finished ========
 GetYSymmetry ===>> -2.81
 GetZSymmetry ===>> -50.72
-GetParameter Trap Current Readback ===>> 198.258926936459
+GetParameter Trap Current Readback ===>> 197.923274125618
 GetHighVoltage ===>> 4499.94659342336
 start measurement
 do measurement
 L#=65885 analysis type=unknown
 Measurement Started jan_unknown400_120.py
-22:49:14 -- ******* Measurement Started jan_unknown400_120.py *******
+07:15:04 -- ******* Measurement Started jan_unknown400_120.py *******
 state changed from extraction to measurement
 setting trap, emission, spec, defl, and gains
 GetExtractionLens ===>> 26.13
 GetYSymmetry ===>> -2.81
 GetZSymmetry ===>> -50.72
 GetZFocus ===>> 74.64
-get handler 129.138.12.153,1061 3
 GetDeflection H2 ===>> 0
 GetDeflection H1 ===>> 0
 GetDeflection AX ===>> 190
@@ -665,19 +627,21 @@ GetGain L1 ===>> 0.010309
 GetGain L2 ===>> 0.091218
 GetGain CDD ===>> 0
 GetParameter Trap Current Readback ===>> 198.147042666178
-GetParameter Source Current Readback ===>> 553.266434718916
+GetParameter Source Current Readback ===>> 551.441677348471
 pre measurement save
-New frame /Users/jan/PychronDev/data/isotopes/c1/35e168-780f-4790-8673-d69dc4f2cc70.h5
-flush and close file /Users/jan/PychronDev/data/isotopes/c1/35e168-780f-4790-8673-d69dc4f2cc70.h5
+New frame /Users/jan/PychronDev/data/isotopes/8d/cbbc18-aa5b-4259-a229-ff05c949d8fc.h5
+flush and close file /Users/jan/PychronDev/data/isotopes/8d/cbbc18-aa5b-4259-a229-ff05c949d8fc.h5
 testing...
 no interpolation path defined
-executed snippet estimated_duration=552.28, duration=0.000169038772583
+executed snippet estimated_duration=552.28, duration=0.000277042388916
 unknown measurement script
 activate_detectors ('H2', 'H1', 'AX', 'L1', 'L2', 'CDD') {}
 activate detectors
 *************** Set Analysis View Ar/Ar
 create graphs
 clearing graphs
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
 clear isotope group
 setting isotope det=H2, iso=Ar41
 setting isotope det=H1, iso=Ar40
@@ -707,6 +671,7 @@ Mapping mass to dac mass func: "parabolic"
 H1 map mass coeffs = [ -3.11428344e-04   1.33794662e-01   1.02887323e+00]
 H1 map mass to dac 39.9624 >> 5.87828
 GetDeflection H1 ===>> 0
+get handler 129.138.12.153,1061 3
 GetHighVoltage ===>> 4499.94659342336
 positioning Ar40 (5.87824538336) on H1
 setting magnet DAC
@@ -719,7 +684,7 @@ SetMagnetDAC 5.87824538336 ===>> OK
 set_dac. change=False
 equilibrate () {'delay': 3, 'inlet': 'R', 'outlet': 'O', 'eqtime': 12.0}
 Equilibration Started
-22:49:15 -- ******* Equilibration Started *******
+07:15:05 -- ******* Equilibration Started *******
 checking ownership. requestor=129.138.12.150
 check software interlocks O
 interlocks []
@@ -730,23 +695,24 @@ Close O ===>> OK
 get handler 129.138.12.153,1061 3
 GetIndicatorState O ===>> False
 change switch state (True, True)
-22:49:15 -- CLOSE  VALVE-O (Jan Ion Pump)
+07:15:05 -- CLOSE  VALVE-O (Jan Ion Pump)
 waiting 3s before opening inlet value ('R',)
-update labels <pychron.experiment.plot_panel.PlotPanel object at 0x12a356a70>
-update labels "<pychron.graph.stacked_regression_graph.StackedRegressionGraph object at 0x13064e7d0>"
+update labels <pychron.experiment.plot_panel.PlotPanel object at 0x138e85b30>
+update labels "<pychron.graph.stacked_regression_graph.StackedRegressionGraph object at 0x14162c350>"
 setting label 0 H2 Ar41
 setting label 1 H1 Ar40
 setting label 2 AX Ar39
 setting label 3 L1 Ar38
 setting label 4 L2 Ar37
 setting label 5 CDD Ar36
-update labels "<pychron.graph.stacked_graph.StackedGraph object at 0x138e85110>"
+update labels "<pychron.graph.stacked_graph.StackedGraph object at 0x141aba650>"
 setting label 0 H2 Ar41
 setting label 1 H1 Ar40
 setting label 2 AX Ar39
 setting label 3 L1 Ar38
 setting label 4 L2 Ar37
 setting label 5 CDD Ar36
+get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 checking ownership. requestor=129.138.12.150
@@ -757,14 +723,9 @@ doing actuation None-script open_channel True
 get handler 129.138.12.153,1061 3
 Open R ===>> OK
 get handler 129.138.12.153,1061 3
-set states for children of R. state=True
-refresh_canvas_needed fired
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
 GetIndicatorState R ===>> OK
 change switch state (True, True)
-get handler 129.138.12.153,1061 3
-22:49:19 -- OPEN   VALVE-R (Jan Inlet)
+07:15:08 -- OPEN   VALVE-R (Jan Inlet)
 equilibrating for 12.0sec
 set_time_zero () {}
 sniff (12.0,) {}
@@ -776,7 +737,7 @@ add group /sniff/Ar39 (Group) '' table AX
 add group /sniff/Ar38 (Group) '' table L1
 add group /sniff/Ar37 (Group) '' table L2
 add group /sniff/Ar36 (Group) '' table CDD
-flush and close file /Users/jan/PychronDev/data/isotopes/c1/35e168-780f-4790-8673-d69dc4f2cc70.h5
+flush and close file /Users/jan/PychronDev/data/isotopes/8d/cbbc18-aa5b-4259-a229-ff05c949d8fc.h5
 measuring sniff. ncounts=12.0
 "sniff" increment series count="1" fit count="0" regressing="False"
 starting measurement
@@ -794,8 +755,10 @@ get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
 Equilibration Finished
-22:49:31 -- ******* Equilibration Finished *******
+07:15:21 -- ******* Equilibration Finished *******
 checking ownership. requestor=129.138.12.150
 check software interlocks R
 interlocks []
@@ -806,21 +769,21 @@ Close R ===>> OK
 get handler 129.138.12.153,1061 3
 GetIndicatorState R ===>> False
 change switch state (True, True)
-22:49:31 -- CLOSE  VALVE-R (Jan Inlet)
+07:15:22 -- CLOSE  VALVE-R (Jan Inlet)
 Post Equilibration Started jan_pump_extraction_line.py
-22:49:31 -- ******* Post Equilibration Started jan_pump_extraction_line.py *******
+07:15:22 -- ******* Post Equilibration Started jan_pump_extraction_line.py *******
 testing...
 no interpolation path defined
 calculate duration
 testing...
 no interpolation path defined
-executed snippet estimated_duration=4.0, duration=0.000151872634888
-executed snippet estimated_duration=4.0, duration=0.00110197067261
+executed snippet estimated_duration=4.0, duration=0.000141859054565
+executed snippet estimated_duration=4.0, duration=0.00532913208008
 Pump after analysis
 doing GOSUB
 testing...
 no interpolation path defined
-executed snippet estimated_duration=4.0, duration=0.000144004821777
+executed snippet estimated_duration=4.0, duration=0.000139951705933
 Pump Microbone
 close () {'description': 'Jan Inlet'}
 close name=--- desc=Jan Inlet
@@ -832,11 +795,9 @@ doing actuation None-script close_channel False
 get handler 129.138.12.153,1061 3
 waiting for write to finish
 measurement finished
-estimated time: 12.583 actual time: :12.732
-flush and close file /Users/jan/PychronDev/data/isotopes/c1/35e168-780f-4790-8673-d69dc4f2cc70.h5
+estimated time: 12.583 actual time: :13.029
+flush and close file /Users/jan/PychronDev/data/isotopes/8d/cbbc18-aa5b-4259-a229-ff05c949d8fc.h5
 set_fits () {}
-Close R ===>> OK
-get handler 129.138.12.153,1061 3
 using default fits file=/Users/jan/PychronDev/scripts/measurement/fits/nominal.yaml
 set "Ar41" to "('linear', 'SEM')"
 set "Ar40" to "('Parabolic', 'SEM')"
@@ -846,10 +807,7 @@ set "Ar38" to "('linear', 'SEM')"
 set "Ar39" to "('Parabolic', 'SEM')"
 set_baseline_fits () {}
 using default fits file=/Users/jan/PychronDev/scripts/measurement/fits/nominal.yaml
-get handler 129.138.12.153,1061 3
-GetIndicatorState R ===>> False
 set "H2" to "('average', 'SEM')"
-change switch state (True, True)
 set "H1" to "('average', 'SEM')"
 set "CDD" to "('average', 'SEM')"
 set "L2" to "('average', 'SEM')"
@@ -857,17 +815,22 @@ set "L1" to "('average', 'SEM')"
 set "AX" to "('average', 'SEM')"
 multicollect () {'integration_time': 1, 'ncounts': 400}
 build tables- signal [Detector(H2), Detector(H1), Detector(AX), Detector(L1), Detector(L2), Detector(CDD)]
-22:49:32 -- CLOSE  VALVE-R (Jan Inlet)
--------------------------- close None (Jan Inlet) result=[(True, True)]
 add group /signal/Ar41 (Group) '' table H2
 add group /signal/Ar40 (Group) '' table H1
 add group /signal/Ar39 (Group) '' table AX
 add group /signal/Ar38 (Group) '' table L1
 add group /signal/Ar37 (Group) '' table L2
 add group /signal/Ar36 (Group) '' table CDD
-flush and close file /Users/jan/PychronDev/data/isotopes/c1/35e168-780f-4790-8673-d69dc4f2cc70.h5
+flush and close file /Users/jan/PychronDev/data/isotopes/8d/cbbc18-aa5b-4259-a229-ff05c949d8fc.h5
 measuring signal. ncounts=400
+Close R ===>> OK
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
 "signal" increment series count="2" fit count="1" regressing="True"
+GetIndicatorState R ===>> False
+change switch state (True, True)
+07:15:22 -- CLOSE  VALVE-R (Jan Inlet)
+-------------------------- close None (Jan Inlet) result=[(True, True)]
 action=close, ok=True, locked=[False]
 is_closed ('F',) {}
 is F () closed?
@@ -880,13 +843,13 @@ interlocks []
 actuate state mode=None-script, software_lock=False
 doing actuation None-script open_channel False
 get handler 129.138.12.153,1061 3
+starting measurement
 Open A ===>> OK
 get handler 129.138.12.153,1061 3
 GetIndicatorState A ===>> OK
 change switch state (True, True)
-22:49:32 -- OPEN   VALVE-A (CO2 Laser to Jan)
+07:15:23 -- OPEN   VALVE-A (CO2 Laser to Jan)
 -------------------------- open None (CO2 Laser to Jan) result=[(True, True)]
-starting measurement
 action=open, ok=True, locked=[False]
 sleep (1,) {}
 SLEEP 1.0
@@ -913,9 +876,8 @@ Open U ===>> OK
 get handler 129.138.12.153,1061 3
 GetIndicatorState U ===>> OK
 change switch state (True, True)
-22:49:34 -- OPEN   VALVE-U (Microbone to Turbo)
+07:15:24 -- OPEN   VALVE-U (Microbone to Turbo)
 -------------------------- open None (Microbone to Turbo) result=[(True, True)]
-get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 action=open, ok=True, locked=[False]
 open () {'description': 'Microbone to Getter NP-10'}
@@ -930,7 +892,7 @@ Open M ===>> OK
 get handler 129.138.12.153,1061 3
 GetIndicatorState M ===>> OK
 change switch state (True, True)
-22:49:34 -- OPEN   VALVE-M (Microbone to Getter NP-10)
+07:15:25 -- OPEN   VALVE-M (Microbone to Getter NP-10)
 -------------------------- open None (Microbone to Getter NP-10) result=[(True, True)]
 action=open, ok=True, locked=[False]
 open () {'description': 'Microbone to Getter D-50'}
@@ -943,12 +905,12 @@ doing actuation None-script open_channel False
 get handler 129.138.12.153,1061 3
 Open K ===>> OK
 get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
 GetIndicatorState K ===>> OK
 change switch state (True, True)
-22:49:35 -- OPEN   VALVE-K (Microbone to Getter D-50)
+07:15:25 -- OPEN   VALVE-K (Microbone to Getter D-50)
 -------------------------- open None (Microbone to Getter D-50) result=[(True, True)]
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
 action=open, ok=True, locked=[False]
 open () {'description': 'Microbone to CO2 Laser'}
 open name=--- desc=Microbone to CO2 Laser
@@ -962,7 +924,7 @@ Open T ===>> OK
 get handler 129.138.12.153,1061 3
 GetIndicatorState T ===>> OK
 change switch state (True, True)
-22:49:36 -- OPEN   VALVE-T (Microbone to CO2 Laser)
+07:15:26 -- OPEN   VALVE-T (Microbone to CO2 Laser)
 -------------------------- open None (Microbone to CO2 Laser) result=[(True, True)]
 action=open, ok=True, locked=[False]
 open () {'description': 'Microbone to Inlet Pipette'}
@@ -975,16 +937,17 @@ doing actuation None-script open_channel False
 get handler 129.138.12.153,1061 3
 Open S ===>> OK
 get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
 GetIndicatorState S ===>> OK
 change switch state (True, True)
-22:49:36 -- OPEN   VALVE-S (Microbone to Inlet Pipette)
+07:15:27 -- OPEN   VALVE-S (Microbone to Inlet Pipette)
 -------------------------- open None (Microbone to Inlet Pipette) result=[(True, True)]
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
 action=open, ok=True, locked=[False]
 sleep (1,) {}
 SLEEP 1.0
-testing H1<-5.0
-evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08593072804246121}"
-get handler 129.138.12.153,1061 3
 set_resource () {'name': 'CO2PumpTimeFlag', 'value': 30}
 get handler 129.138.12.153,1061 3
 Set CO2PumpTimeFlag 30 ===>> OK
@@ -992,7 +955,7 @@ release ('JanCO2Flag',) {}
 release JanCO2Flag
 get handler 129.138.12.153,1061 3
 Set JanCO2Flag 0 ===>> OK
-executed snippet estimated_duration=6.0, duration=6.0550301075
+executed snippet estimated_duration=6.0, duration=6.13905215263
 PumpMicrobone.py completed successfully
 gosub finished
 get_resource_value () {'name': 'JanMiniboneFlag'}
@@ -1004,42 +967,24 @@ get_resource_value () {'name': 'JanMiniboneFlag'}
 get handler 129.138.12.153,1061 3
 Read JanMiniboneFlag ===>> 0
 Get Resource Value JanMiniboneFlag=0.0
-executed snippet estimated_duration=4.0, duration=6.06785392761
+executed snippet estimated_duration=4.0, duration=6.15782809258
 jan_pump_extraction_line.py completed successfully
 Post Equilibration Finished
-22:49:38 -- ******* Post Equilibration Finished *******
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-testing H1<-5.0
-get handler 129.138.12.153,1061 3
-evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08593072804246121}"
-get handler 129.138.12.153,1061 3
+07:15:28 -- ******* Post Equilibration Finished *******
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 testing H1<-5.0
-evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08593072804246121}"
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-testing H1<-5.0
-evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08593072804246121}"
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 testing H1<-5.0
-evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08593072804246121}"
-22:49:58 -- collecting point 25
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
@@ -1048,7 +993,7 @@ get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 testing H1<-5.0
-evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08593072804246121}"
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
@@ -1057,7 +1002,8 @@ get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 testing H1<-5.0
-evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08593072804246121}"
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
+07:15:48 -- collecting point 25
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
@@ -1065,7 +1011,7 @@ get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 testing H1<-5.0
-evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08593072804246121}"
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
@@ -1073,7 +1019,7 @@ get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 testing H1<-5.0
-evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08593072804246121}"
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
@@ -1081,17 +1027,7 @@ get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 testing H1<-5.0
-evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08593072804246121}"
-22:50:24 -- collecting point 50
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-testing H1<-5.0
-evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08593072804246121}"
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
@@ -1100,14 +1036,7 @@ get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 testing H1<-5.0
-evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08593072804246121}"
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-testing H1<-5.0
-evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08593072804246121}"
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
@@ -1116,7 +1045,16 @@ get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 testing H1<-5.0
-evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08593072804246121}"
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
+07:16:14 -- collecting point 50
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
+get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
@@ -1124,8 +1062,7 @@ get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 testing H1<-5.0
-evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08593072804246121}"
-22:50:50 -- collecting point 75
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
@@ -1133,9 +1070,677 @@ get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 testing H1<-5.0
-evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08593072804246121}"
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
+07:16:40 -- collecting point 75
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
 testing Ar36<0.001
-evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.0579746956450777}"
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.0659947238759923}"
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.06555335495254618}"
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.06460275394090724}"
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.06340569900210542}"
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.06300831370606622}"
+07:17:07 -- collecting point 100
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.06318074251227139}"
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.06334557395400645}"
+get handler 129.138.12.153,1061 3
+set states for children of Q. state=False
+refresh_canvas_needed fired
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+set states for children of E. state=True
+set states for children of D. state=False
+set states for children of I. state=True
+refresh_canvas_needed fired
+get handler 129.138.12.153,1061 3
+State checksums do not match. Local:-869564398 Remote:611344307
+State checksum failed
+get handler 129.138.12.153,1061 3
+set states for children of B. state=False
+refresh_canvas_needed fired
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.06311113848769391}"
+get handler 129.138.12.153,1061 3
+State checksums do not match. Local:611344307 Remote:393193677
+State checksum failed
+get handler 129.138.12.153,1061 3
+set states for children of Y. state=True
+refresh_canvas_needed fired
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.06322643900183018}"
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.06247198206232403}"
+07:17:33 -- collecting point 125
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.06218851817052889}"
+get handler 129.138.12.153,1061 3
+set states for children of Y. state=False
+refresh_canvas_needed fired
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+set states for children of Z. state=True
+refresh_canvas_needed fired
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.06212664363192563}"
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.0622771063531848}"
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.061884661170674246}"
+get handler 129.138.12.153,1061 3
+set states for children of Z. state=False
+refresh_canvas_needed fired
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+set states for children of C. state=False
+refresh_canvas_needed fired
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+set states for children of P. state=False
+refresh_canvas_needed fired
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.06187050339356537}"
+07:17:59 -- collecting point 150
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+set states for children of Y. state=True
+refresh_canvas_needed fired
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.06196312137619195}"
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.061984348494761955}"
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.06196874833996069}"
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+set states for children of V. state=False
+refresh_canvas_needed fired
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.061646514263461086}"
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+set states for children of H. state=True
+refresh_canvas_needed fired
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.06209994421774247}"
+07:18:25 -- collecting point 175
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.062137847893357655}"
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+set states for children of H. state=False
+refresh_canvas_needed fired
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.06262266575447649}"
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+set states for children of C. state=True
+refresh_canvas_needed fired
+get handler 129.138.12.153,1061 3
+set states for children of B. state=True
+set states for children of D. state=True
+refresh_canvas_needed fired
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.062468943338686946}"
+get handler 129.138.12.153,1061 3
+set states for children of I. state=False
+set states for children of Q. state=True
+set states for children of P. state=True
+refresh_canvas_needed fired
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.06236441418879288}"
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.062140254209156066}"
+07:18:52 -- collecting point 200
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+set states for children of Y. state=False
+refresh_canvas_needed fired
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.06231459749614581}"
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.06240668617958882}"
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.06269969052735112}"
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.06251374571133}"
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.0625293613532789}"
+07:19:18 -- collecting point 225
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.06247951365529465}"
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.06229056200287147}"
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.06200383948947067}"
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.06186247334855894}"
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.061878874371310094}"
+07:19:44 -- collecting point 250
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.06203269572635102}"
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.061976950404160604}"
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.062012815811798155}"
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.06196981842877522}"
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.06193481021359096}"
+07:20:11 -- collecting point 275
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.06188903000366801}"
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.0618745815546472}"
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.06194907148783012}"
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.06187808483982499}"
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.06179091963569913}"
+07:20:37 -- collecting point 300
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.06180236586603161}"
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.06162983762693619}"
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.061594979477196804}"
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.061646859881013365}"
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.061650668894413944}"
+07:21:03 -- collecting point 325
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.06170988425527661}"
+get handler 129.138.12.153,1061 3
+set states for children of V. state=True
+refresh_canvas_needed fired
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.06158156379621702}"
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.06166600331439227}"
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.06178736838240744}"
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.0616237211722439}"
+07:21:29 -- collecting point 350
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.061624322406567206}"
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.06154100777242087}"
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.06154434595378783}"
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
@@ -1146,9 +1751,9 @@ get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 testing H1<-5.0
-evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08593072804246121}"
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
 testing Ar36<0.001
-evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.057560873295050996}"
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.06165889581298639}"
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
@@ -1156,10 +1761,10 @@ get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 testing H1<-5.0
-evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08593072804246121}"
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
 testing Ar36<0.001
-evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.05651556632021572}"
-get handler 129.138.12.153,1061 3
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.06164298237360477}"
+07:21:56 -- collecting point 375
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
@@ -1167,20 +1772,9 @@ get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 testing H1<-5.0
-evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08593072804246121}"
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
 testing Ar36<0.001
-evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.05661929097499491}"
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-testing H1<-5.0
-evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08593072804246121}"
-testing Ar36<0.001
-evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.05679734055786131}"
-22:51:17 -- collecting point 100
-get handler 129.138.12.153,1061 3
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.06153301596902941}"
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
@@ -1188,18 +1782,9 @@ get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 testing H1<-5.0
-evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08593072804246121}"
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
 testing Ar36<0.001
-evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.05721717487007847}"
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-testing H1<-5.0
-evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08593072804246121}"
-testing Ar36<0.001
-evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.05816931446760001}"
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.0615633664345149}"
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
@@ -1208,40 +1793,9 @@ get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 testing H1<-5.0
-evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08593072804246121}"
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
 testing Ar36<0.001
-evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.058069256908682976}"
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-testing H1<-5.0
-evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08593072804246121}"
-testing Ar36<0.001
-evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.057683177969407286}"
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-testing H1<-5.0
-evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08593072804246121}"
-testing Ar36<0.001
-evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.05769386487468613}"
-22:51:43 -- collecting point 125
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-testing H1<-5.0
-evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08593072804246121}"
-testing Ar36<0.001
-evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.0577779812354874}"
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.06155319822078401}"
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
@@ -1250,9 +1804,102 @@ get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 testing H1<-5.0
-evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08593072804246121}"
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
 testing Ar36<0.001
-evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.05776090198080996}"
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.061493848786071524}"
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08935674855650547}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.06145382869971098}"
+07:22:22 -- collecting point 400
+waiting for write to finish
+measurement finished
+estimated time: 419.430 actual time: :420.251
+flush and close file /Users/jan/PychronDev/data/isotopes/8d/cbbc18-aa5b-4259-a229-ff05c949d8fc.h5
+baselines () {'settling_time': 15.0, 'detector': 'H1', 'mass': 34.2, 'ncounts': 120}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Baseline
+build tables- baseline [Detector(H2), Detector(H1), Detector(AX), Detector(L1), Detector(L2), Detector(CDD)]
+add group baseline table H2
+add group baseline table H1
+add group baseline table AX
+add group baseline table L1
+add group baseline table L2
+add group baseline table CDD
+flush and close file /Users/jan/PychronDev/data/isotopes/8d/cbbc18-aa5b-4259-a229-ff05c949d8fc.h5
+detector Detector(H1)
+POSITION 34.2 H1
+Mapping mass to dac mass func: "parabolic"
+H1 map mass coeffs = [ -3.11428344e-04   1.33794662e-01   1.02887323e+00]
+H1 map mass to dac 34.2 >> 5.24039160773
+GetDeflection H1 ===>> 0
+GetHighVoltage ===>> 4499.94659342336
+positioning 34.2 (5.24036074755) on H1
+setting magnet DAC
+current  : 5.878245
+requested: 5.240361
+Delta Dac: 0.637885
+Checking detector protection. dv=0.63788
+Checking detector "CDD". Protection Threshold: 0.5 (V)
+ProtectDetector CDD,On ===>> OK
+GetDeflection CDD ===>> 2000
+Protected = 2000
+SetMagnetDAC 5.24036074755 ===>> OK
+Magnet settling time: 0.500 0.500
+Magnet settling complete
+Wait for magnet to stop moving
+GetMagnetMoving ===>> True
+get handler 129.138.12.153,1061 3
+GetMagnetMoving ===>> True
+GetMagnetMoving ===>> True
+GetMagnetMoving ===>> True
+GetMagnetMoving ===>> True
+get handler 129.138.12.153,1061 3
+GetMagnetMoving ===>> True
+GetMagnetMoving ===>> True
+GetMagnetMoving ===>> True
+GetMagnetMoving ===>> True
+get handler 129.138.12.153,1061 3
+GetMagnetMoving ===>> False
+Magnet move complete
+Unprotect detectors
+ProtectDetector CDD,Off ===>> OK
+GetDeflection CDD ===>> 50
+set_dac. change=True
+Delaying 15.0s for detectors to settle
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+Join finished
+measuring baseline. ncounts=120
+"baseline" increment series count="2" fit count="1" regressing="True"
+starting measurement
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.11418882516008869}"
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
@@ -1261,18 +1908,7 @@ get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 testing H1<-5.0
-evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08593072804246121}"
-testing Ar36<0.001
-evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.057672269329188744}"
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-testing H1<-5.0
-evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08593072804246121}"
-testing Ar36<0.001
-evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.057687664538764026}"
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.0810710375542405}"
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
@@ -1281,10 +1917,7 @@ get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 testing H1<-5.0
-evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08593072804246121}"
-testing Ar36<0.001
-evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.057726726877749615}"
-22:52:09 -- collecting point 150
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.082296085765708}"
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
@@ -1292,20 +1925,7 @@ get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 testing H1<-5.0
-evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08593072804246121}"
-testing Ar36<0.001
-evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.05782860571821716}"
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-testing H1<-5.0
-evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08593072804246121}"
-testing Ar36<0.001
-evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.057934611079059395}"
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08408789691528706}"
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
@@ -1313,9 +1933,8 @@ get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 testing H1<-5.0
-evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08593072804246121}"
-testing Ar36<0.001
-evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.057863473205196664}"
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.07374685946606178}"
+07:23:06 -- collecting point 25
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
@@ -1323,9 +1942,7 @@ get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 testing H1<-5.0
-evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08593072804246121}"
-testing Ar36<0.001
-evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.05777389453423192}"
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.07229515551666932}"
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
@@ -1334,186 +1951,7 @@ get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 testing H1<-5.0
-evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08593072804246121}"
-testing Ar36<0.001
-evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.05797197789948207}"
-22:52:36 -- collecting point 175
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-testing H1<-5.0
-evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08593072804246121}"
-testing Ar36<0.001
-evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.058037825260841426}"
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-testing H1<-5.0
-evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08593072804246121}"
-testing Ar36<0.001
-evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.05782840481881587}"
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-testing H1<-5.0
-evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08593072804246121}"
-testing Ar36<0.001
-evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.05775316657402936}"
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-testing H1<-5.0
-evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08593072804246121}"
-testing Ar36<0.001
-evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.05772730826874759}"
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-testing H1<-5.0
-evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08593072804246121}"
-testing Ar36<0.001
-evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.05782852264607094}"
-22:53:02 -- collecting point 200
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-testing H1<-5.0
-evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08593072804246121}"
-testing Ar36<0.001
-evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.0579230858083479}"
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-testing H1<-5.0
-evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08593072804246121}"
-testing Ar36<0.001
-evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.05816342168714153}"
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-testing H1<-5.0
-evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08593072804246121}"
-testing Ar36<0.001
-evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.05810153859803162}"
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-testing H1<-5.0
-evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08593072804246121}"
-testing Ar36<0.001
-evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.05813314227831007}"
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-testing H1<-5.0
-evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08593072804246121}"
-testing Ar36<0.001
-evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.05799658990613371}"
-22:53:28 -- collecting point 225
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-testing H1<-5.0
-evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08593072804246121}"
-testing Ar36<0.001
-evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.05802466827697674}"
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-testing H1<-5.0
-evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08593072804246121}"
-testing Ar36<0.001
-evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.058012019418804746}"
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-testing H1<-5.0
-evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08593072804246121}"
-testing Ar36<0.001
-evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.058185526626382836}"
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-testing H1<-5.0
-evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08593072804246121}"
-testing Ar36<0.001
-evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.058410720469896975}"
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-testing H1<-5.0
-evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08593072804246121}"
-testing Ar36<0.001
-evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.05827046007620128}"
-22:53:55 -- collecting point 250
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-testing H1<-5.0
-evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08593072804246121}"
-testing Ar36<0.001
-evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.05840666784988824}"
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-testing H1<-5.0
-evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08593072804246121}"
-testing Ar36<0.001
-evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.05841887967791364}"
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.07761868685368663}"
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
@@ -1524,9 +1962,14 @@ get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 testing H1<-5.0
-evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08593072804246121}"
-testing Ar36<0.001
-evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.05831998546172808}"
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08097262605221833}"
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08077216886702111}"
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
@@ -1535,9 +1978,8 @@ get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 testing H1<-5.0
-evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08593072804246121}"
-testing Ar36<0.001
-evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.05833783328048288}"
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08456380461507902}"
+07:23:33 -- collecting point 50
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
@@ -1545,10 +1987,7 @@ get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 testing H1<-5.0
-evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08593072804246121}"
-testing Ar36<0.001
-evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.058369953479522445}"
-22:54:21 -- collecting point 275
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08411535535551365}"
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
@@ -1556,9 +1995,7 @@ get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 testing H1<-5.0
-evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08593072804246121}"
-testing Ar36<0.001
-evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.05826815200251018}"
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08852883875287582}"
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
@@ -1566,9 +2003,7 @@ get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 testing H1<-5.0
-evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08593072804246121}"
-testing Ar36<0.001
-evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.058272114780915374}"
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08561917955175681}"
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
@@ -1577,9 +2012,15 @@ get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 testing H1<-5.0
-evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08593072804246121}"
-testing Ar36<0.001
-evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.05817769913382945}"
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08604505988987166}"
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08759601321341566}"
+07:23:59 -- collecting point 75
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
@@ -1588,28 +2029,18 @@ get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 testing H1<-5.0
-evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08593072804246121}"
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08774500732533402}"
 testing Ar36<0.001
-evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.05829708434079416}"
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.061469597566778}"
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 testing H1<-5.0
-evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08593072804246121}"
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08910642234232483}"
 testing Ar36<0.001
-evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.058169146382657}"
-22:54:47 -- collecting point 300
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-testing H1<-5.0
-evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08593072804246121}"
-testing Ar36<0.001
-evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.05823082324604971}"
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.06146993288573123}"
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
@@ -1618,17 +2049,9 @@ get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 testing H1<-5.0
-evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08593072804246121}"
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08849007216679292}"
 testing Ar36<0.001
-evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.05819924316368423}"
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-ask. get packet. error: timed out address: UDP://129.138.12.152:1069
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.153,1061 3
-get handler 129.138.12.152,1069 3
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.061468563729466005}"
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
@@ -1636,54 +2059,550 @@ get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 testing H1<-5.0
-evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08593072804246121}"
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08966748493385732}"
 testing Ar36<0.001
-evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.058175665085242925}"
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.06146734022812262}"
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
 get handler 129.138.12.153,1061 3
-No Intensity change. Something is wrong. 
 testing H1<-5.0
-evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08593072804246121}"
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08943912275358479}"
 testing Ar36<0.001
-evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.05820216323659412}"
-flush and close file /Users/jan/PychronDev/data/isotopes/c1/35e168-780f-4790-8673-d69dc4f2cc70.h5
-_execute: Traceback (most recent call last):
-  File "/Users/jan/Programming/git/pychron_dev/pychron/pyscripts/pyscript.py", line 360, in execute_snippet
-    func(*argv)
-  File "<string>", line 75, in main
-  File "/Users/jan/Programming/git/pychron_dev/pychron/pyscripts/pyscript.py", line 135, in decorator
-    return func(obj, *args, **kw)
-  File "/Users/jan/Programming/git/pychron_dev/pychron/pyscripts/measurement_pyscript.py", line 198, in multicollect
-    series=self._series_count):
-  File "/Users/jan/Programming/git/pychron_dev/pychron/pyscripts/measurement_pyscript.py", line 883, in _automated_run_call
-    return func(*args, **kw)
-  File "/Users/jan/Programming/git/pychron_dev/pychron/experiment/automated_run/automated_run.py", line 361, in py_data_collection
-    check_conditionals, sc, obj)
-  File "/Users/jan/Programming/git/pychron_dev/pychron/experiment/automated_run/automated_run.py", line 2316, in _measure
-    m.measure()
-  File "/Users/jan/Programming/git/pychron_dev/pychron/experiment/automated_run/data_collector.py", line 116, in measure
-    self._measure(evt)
-  File "/Users/jan/Programming/git/pychron_dev/pychron/experiment/automated_run/data_collector.py", line 154, in _measure
-    if not self._iter(i):
-  File "/Users/jan/Programming/git/pychron_dev/pychron/experiment/automated_run/data_collector.py", line 181, in _iter
-    if not self._iter_hook(i):
-  File "/Users/jan/Programming/git/pychron_dev/pychron/experiment/automated_run/multi_collector.py", line 37, in _iter_hook
-    return self._iteration(i)
-  File "/Users/jan/Programming/git/pychron_dev/pychron/experiment/automated_run/data_collector.py", line 204, in _iteration
-    data = self._get_data(detectors)
-  File "/Users/jan/Programming/git/pychron_dev/pychron/experiment/automated_run/data_collector.py", line 236, in _get_data
-    data = next(self.data_generator)
-StopIteration
-
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.06146773874817665}"
+07:24:25 -- collecting point 100
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.0887249764145465}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.06146809894899471}"
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08712802806425647}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.06146842610386615}"
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08705414887924273}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.061468724560941865}"
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08605834597060923}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.061467751340070785}"
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+waiting for write to finish
+measurement finished
+estimated time: 125.829 actual time: :126.067
+flush and close file /Users/jan/PychronDev/data/isotopes/8d/cbbc18-aa5b-4259-a229-ff05c949d8fc.h5
+activate_detectors ('H1', 'AX', 'L2', 'CDD') {'peak_center': True}
+peak_center () {'detector': 'H1', 'integration_time': 0.262144, 'isotope': 'Ar40'}
+peak center: mean=24.2309860743 threshold=5.0
+peak center started
+setup peak center. detector=['H1', 'AX', 'L2', 'CDD'], isotope=Ar40
+VersionedUnpickler [<apptools.sweet_pickle.versioned_unpickler.VersionedUnpickler object at 0x1373c2a70>] using Updater [<apptools.sweet_pickle.updater.Updater object at 0x130f3d1d0>]
+VersionedUnpickler [<apptools.sweet_pickle.versioned_unpickler.VersionedUnpickler object at 0x1373c2a70>] using Updater [<apptools.sweet_pickle.updater.Updater object at 0x130f3d1d0>]
+VersionedUnpickler [<apptools.sweet_pickle.versioned_unpickler.VersionedUnpickler object at 0x139731170>] using Updater [<apptools.sweet_pickle.updater.Updater object at 0x130f3d1d0>]
+Mapping mass to dac mass func: "parabolic"
+H1 map mass coeffs = [ -3.11428344e-04   1.33794662e-01   1.02887323e+00]
+H1 map mass to dac 39.9624 >> 5.87828
+GetDeflection H1 ===>> 0
+GetHighVoltage ===>> 4499.94659342336
+do peak center. <pychron.spectrometer.jobs.peak_center.PeakCenter object at 0x130f82590>
+doing pc
+starting peak center. center dac= 5.87824538336 step_width=0.001
+width = 0.001
+get scan parameters. half-width=0.015,window=0.015, i=0, scalar=1
+Scan parameters center=5.87825 width=0.03000 (5.86325 - 5.89325)
+Moving to starting dac 5.86324538336
+setting magnet DAC
+current  : 5.240361
+requested: 5.863245
+Delta Dac: 0.622885
+Checking detector protection. dv=0.62288
+Checking detector "CDD". Protection Threshold: 0.5 (V)
+ProtectDetector CDD,On ===>> OK
+GetDeflection CDD ===>> 2000
+Protected = 2000
+SetMagnetDAC 5.86324538336 ===>> OK
+Magnet settling time: 0.500 0.500
+Magnet settling complete
+Wait for magnet to stop moving
+GetMagnetMoving ===>> True
+GetMagnetMoving ===>> True
+GetMagnetMoving ===>> True
+get handler 129.138.12.153,1061 3
+GetMagnetMoving ===>> True
+GetMagnetMoving ===>> True
+GetMagnetMoving ===>> True
+GetMagnetMoving ===>> True
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+GetMagnetMoving ===>> True
+GetMagnetMoving ===>> True
+GetMagnetMoving ===>> False
+Magnet move complete
+Unprotect detectors
+ProtectDetector CDD,Off ===>> OK
+GetDeflection CDD ===>> 50
+set_dac. change=True
+Wait until signal near baseline. tol= 0.0561413392353. timeout= 10
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+Peak center baseline intensity achieved
+_do_sweep sm= 5.86324538336, em= 5.89324538336, stm= 0.001
+calculated step values: start=5.86324538336, end=5.89324538336, width=0.001, nsteps=31.0
+setting magnet DAC
+current  : 5.863245
+requested: 5.863245
+Delta Dac: 0.000000
+Checking detector protection. dv=0.00000
+Checking detector "CDD". Protection Threshold: 0.5 (V)
+SetMagnetDAC 5.86324538336 ===>> OK
+set_dac. change=False
+setting magnet DAC
+current  : 5.863245
+requested: 5.864280
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.5 (V)
+SetMagnetDAC 5.86427986612 ===>> OK
+Magnet settling time: 2.097 0.500
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+Magnet settling complete
+set_dac. change=True
+setting magnet DAC
+current  : 5.864280
+requested: 5.865314
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.5 (V)
+SetMagnetDAC 5.86531434888 ===>> OK
+Magnet settling time: 2.097 0.500
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+Magnet settling complete
+set_dac. change=True
+setting magnet DAC
+current  : 5.865314
+requested: 5.866349
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.5 (V)
+SetMagnetDAC 5.86634883164 ===>> OK
+Magnet settling time: 2.097 0.500
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+Magnet settling complete
+set_dac. change=True
+setting magnet DAC
+current  : 5.866349
+requested: 5.867383
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.5 (V)
+SetMagnetDAC 5.86738331439 ===>> OK
+Magnet settling time: 2.097 0.500
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+Magnet settling complete
+set_dac. change=True
+setting magnet DAC
+current  : 5.867383
+requested: 5.868418
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.5 (V)
+SetMagnetDAC 5.86841779715 ===>> OK
+Magnet settling time: 2.097 0.500
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+Magnet settling complete
+set_dac. change=True
+setting magnet DAC
+current  : 5.868418
+requested: 5.869452
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.5 (V)
+SetMagnetDAC 5.86945227991 ===>> OK
+Magnet settling time: 2.097 0.500
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+Magnet settling complete
+set_dac. change=True
+setting magnet DAC
+current  : 5.869452
+requested: 5.870487
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.5 (V)
+SetMagnetDAC 5.87048676267 ===>> OK
+Magnet settling time: 2.097 0.500
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+Magnet settling complete
+set_dac. change=True
+setting magnet DAC
+current  : 5.870487
+requested: 5.871521
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.5 (V)
+SetMagnetDAC 5.87152124543 ===>> OK
+Magnet settling time: 2.097 0.500
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+Magnet settling complete
+set_dac. change=True
+setting magnet DAC
+current  : 5.871521
+requested: 5.872556
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.5 (V)
+SetMagnetDAC 5.87255572819 ===>> OK
+Magnet settling time: 2.097 0.500
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+Magnet settling complete
+set_dac. change=True
+setting magnet DAC
+current  : 5.872556
+requested: 5.873590
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.5 (V)
+SetMagnetDAC 5.87359021095 ===>> OK
+Magnet settling time: 2.097 0.500
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+Magnet settling complete
+set_dac. change=True
+setting magnet DAC
+current  : 5.873590
+requested: 5.874625
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.5 (V)
+SetMagnetDAC 5.87462469371 ===>> OK
+Magnet settling time: 2.097 0.500
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+Magnet settling complete
+set_dac. change=True
+setting magnet DAC
+current  : 5.874625
+requested: 5.875659
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.5 (V)
+SetMagnetDAC 5.87565917646 ===>> OK
+Magnet settling time: 2.097 0.500
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+Magnet settling complete
+set_dac. change=True
+setting magnet DAC
+current  : 5.875659
+requested: 5.876694
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.5 (V)
+SetMagnetDAC 5.87669365922 ===>> OK
+Magnet settling time: 2.097 0.500
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+Magnet settling complete
+set_dac. change=True
+setting magnet DAC
+current  : 5.876694
+requested: 5.877728
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.5 (V)
+SetMagnetDAC 5.87772814198 ===>> OK
+Magnet settling time: 2.097 0.500
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+Magnet settling complete
+set_dac. change=True
+setting magnet DAC
+current  : 5.877728
+requested: 5.878763
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.5 (V)
+SetMagnetDAC 5.87876262474 ===>> OK
+Magnet settling time: 2.097 0.500
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+Magnet settling complete
+set_dac. change=True
+setting magnet DAC
+current  : 5.878763
+requested: 5.879797
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.5 (V)
+SetMagnetDAC 5.8797971075 ===>> OK
+Magnet settling time: 2.097 0.500
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+Magnet settling complete
+set_dac. change=True
+setting magnet DAC
+current  : 5.879797
+requested: 5.880832
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.5 (V)
+SetMagnetDAC 5.88083159026 ===>> OK
+Magnet settling time: 2.097 0.500
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+Magnet settling complete
+set_dac. change=True
+setting magnet DAC
+current  : 5.880832
+requested: 5.881866
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.5 (V)
+SetMagnetDAC 5.88186607302 ===>> OK
+Magnet settling time: 2.097 0.500
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+Magnet settling complete
+set_dac. change=True
+setting magnet DAC
+current  : 5.881866
+requested: 5.882901
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.5 (V)
+SetMagnetDAC 5.88290055577 ===>> OK
+Magnet settling time: 2.097 0.500
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+Magnet settling complete
+set_dac. change=True
+setting magnet DAC
+current  : 5.882901
+requested: 5.883935
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.5 (V)
+SetMagnetDAC 5.88393503853 ===>> OK
+Magnet settling time: 2.097 0.500
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+Magnet settling complete
+set_dac. change=True
+setting magnet DAC
+current  : 5.883935
+requested: 5.884970
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.5 (V)
+SetMagnetDAC 5.88496952129 ===>> OK
+Magnet settling time: 2.097 0.500
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+Magnet settling complete
+set_dac. change=True
+setting magnet DAC
+current  : 5.884970
+requested: 5.886004
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.5 (V)
+SetMagnetDAC 5.88600400405 ===>> OK
+Magnet settling time: 2.097 0.500
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+Magnet settling complete
+set_dac. change=True
+setting magnet DAC
+current  : 5.886004
+requested: 5.887038
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.5 (V)
+SetMagnetDAC 5.88703848681 ===>> OK
+Magnet settling time: 2.097 0.500
+get handler 129.138.12.153,1061 3
+Magnet settling complete
+set_dac. change=True
+setting magnet DAC
+current  : 5.887038
+requested: 5.888073
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.5 (V)
+SetMagnetDAC 5.88807296957 ===>> OK
+Magnet settling time: 2.097 0.500
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+Magnet settling complete
+set_dac. change=True
+setting magnet DAC
+current  : 5.888073
+requested: 5.889107
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.5 (V)
+SetMagnetDAC 5.88910745233 ===>> OK
+Magnet settling time: 2.097 0.500
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+Magnet settling complete
+set_dac. change=True
+setting magnet DAC
+current  : 5.889107
+requested: 5.890142
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.5 (V)
+SetMagnetDAC 5.89014193508 ===>> OK
+Magnet settling time: 2.097 0.500
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+Magnet settling complete
+set_dac. change=True
+setting magnet DAC
+current  : 5.890142
+requested: 5.891176
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.5 (V)
+SetMagnetDAC 5.89117641784 ===>> OK
+Magnet settling time: 2.097 0.500
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+Magnet settling complete
+set_dac. change=True
+setting magnet DAC
+current  : 5.891176
+requested: 5.892211
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.5 (V)
+SetMagnetDAC 5.8922109006 ===>> OK
+Magnet settling time: 2.097 0.500
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+Magnet settling complete
+set_dac. change=True
+setting magnet DAC
+current  : 5.892211
+requested: 5.893245
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.5 (V)
+SetMagnetDAC 5.89324538336 ===>> OK
+Magnet settling time: 2.097 0.500
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+Magnet settling complete
+set_dac. change=True
+result of _do_sweep=True
+result of _calculate_peak_center=([5.8703095116168083, 5.878034962518611, 5.8857604134204138], [17.553440669716281, 23.706712932580228, 17.61130057054838], 5.873405704001577, 23.706712932580228)
+Failed to find a valid peak. No peak greater than 1.0. max = 0.125211754163
+Failed to find a valid peak. No peak greater than 1.0. max = 0.0601745642741
+new center pos Detector(H1) (Ar40) @ 5.87803496252
+GetHighVoltage ===>> 4499.94659342336
+GetDeflection H1 ===>> 0
+dac uncorrected for HV and deflection 5.87806957792
+update mftable H1 Ar40 5.87806957792 message=automated run peakcenter
+get initial guess parabolic
+get initial guess parabolic
+get initial guess parabolic
+get initial guess parabolic
+get initial guess parabolic
+get initial guess parabolic
+dump mftable to /Users/jan/PychronDev/setupfiles/spectrometer/mftables/mftable.csv
+add to repo msg=modified - automated run peakcenter
+sweep finished
+get handler 129.138.12.153,1061 3
+locally archiving mftable
+setting magnet DAC
+current  : 5.893245
+requested: 5.878035
+Delta Dac: 0.015210
+Checking detector protection. dv=0.01521
+Checking detector "CDD". Protection Threshold: 0.5 (V)
+SetMagnetDAC 5.87803496252 ===>> OK
+Magnet settling time: 0.500 0.500
+Magnet settling complete
+set_dac. change=True
+Failed to find a valid peak. No peak greater than 1.0. max = 0.125211754163
+Failed to find a valid peak. No peak greater than 1.0. max = 0.0601745642741
+flush and close file /Users/jan/PychronDev/data/isotopes/8d/cbbc18-aa5b-4259-a229-ff05c949d8fc.h5
+finished measure script
+executed snippet estimated_duration=552.28, duration=659.065652132
+jan_unknown400_120.py completed successfully
+Measurement Finished
+07:26:04 -- ******* Measurement Finished *******
 Post Measurement Started jan_pump_ms.py
-22:55:13 -- ******* Post Measurement Started jan_pump_ms.py *******
+07:26:04 -- ******* Post Measurement Started jan_pump_ms.py *******
 testing...
 no interpolation path defined
-executed snippet estimated_duration=0, duration=4.19616699219e-05
+executed snippet estimated_duration=0, duration=2.59876251221e-05
 Pumping spectrometer
 open () {'name': 'O'}
 open name=O desc=---
@@ -1697,28 +2616,550 @@ Open O ===>> OK
 get handler 129.138.12.153,1061 3
 GetIndicatorState O ===>> OK
 change switch state (True, True)
-22:55:13 -- OPEN   VALVE-O (Jan Ion Pump)
+07:26:04 -- OPEN   VALVE-O (Jan Ion Pump)
 -------------------------- open O () result=[(True, True)]
-get handler 129.138.12.153,1061 3
 action=open, ok=True, locked=[False]
-executed snippet estimated_duration=0, duration=0.36940908432
+executed snippet estimated_duration=0, duration=0.371736049652
 jan_pump_ms.py completed successfully
 setting _ms_pumptime
 Post Measurement Finished
-22:55:13 -- ******* Post Measurement Finished *******
+07:26:04 -- ******* Post Measurement Finished *******
+$$$$$$$$$$$$$$$$$$$$ state at run end measurement
+state changed from measurement to success
+post measurement save measured=True aborted=False
+Set filtering
+setting fod for Ar41= {'filter_outliers': True, 'std_devs': 2, 'iterations': 1}
+setting fod for H2= {'filter_outliers': True, 'std_devs': 2, 'iterations': 1}
+setting fod for Ar40= {'filter_outliers': True, 'std_devs': 2, 'iterations': 1}
+setting fod for H1= {'filter_outliers': True, 'std_devs': 2, 'iterations': 1}
+setting fod for Ar36= {'filter_outliers': True, 'std_devs': 2, 'iterations': 1}
+setting fod for CDD= {'filter_outliers': True, 'std_devs': 10, 'iterations': 1}
+setting fod for Ar37= {'filter_outliers': True, 'std_devs': 2, 'iterations': 1}
+setting fod for L2= {'filter_outliers': True, 'std_devs': 2, 'iterations': 1}
+setting fod for Ar38= {'filter_outliers': True, 'std_devs': 2, 'iterations': 1}
+setting fod for L1= {'filter_outliers': True, 'std_devs': 2, 'iterations': 1}
+setting fod for Ar39= {'filter_outliers': True, 'std_devs': 2, 'iterations': 1}
+setting fod for AX= {'filter_outliers': True, 'std_devs': 2, 'iterations': 1}
+not connected to db mysql://janexp@129.138.12.160/labspy
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+Enviromentals: {'lab_humiditys': [{'device': 'EnvironmentalMonitor',
+                    'name': 'Lab Hum.',
+                    'pub_date': '2017-09-06T07:24:51',
+                    'title': 'iServer Hum.',
+                    'value': 45.9}],
+ 'lab_pneumatics': [{'device': 'AirPressure',
+                     'name': 'Pressure',
+                     'pub_date': '2017-09-06T07:24:21',
+                     'title': None,
+                     'value': 96.6},
+                    {'device': 'AirPressure2',
+                     'name': 'Pressure2',
+                     'pub_date': '2017-09-06T07:24:27',
+                     'title': None,
+                     'value': 97.70878}],
+ 'lab_temperatures': [{'device': 'Coldfinger',
+                       'name': 'ColdFinger Temp.',
+                       'pub_date': '2017-09-06T03:05:29',
+                       'title': None,
+                       'value': -196.0},
+                      {'device': 'EnvironmentalMonitor',
+                       'name': 'Lab Temp.',
+                       'pub_date': '2017-09-06T07:24:51',
+                       'title': 'iServer Temp.',
+                       'value': 71.9},
+                      {'device': 'Chiller',
+                       'name': 'Coolant Temp.',
+                       'pub_date': '2017-09-06T06:44:44',
+                       'title': None,
+                       'value': 18.0}]}
+persistence save...
+persistence save - db
+post measurement save
+5163190224 connecting to database sqlite://@/
+connected to db sqlite://@/
+create new session 5163190224
+close session 5163190224
+No database instance. Not saving post measurement to isotopedb database
+$$$$$$$$$$$$$$$ auto_save_detector_ic=False
+massspec enabled True
+create new session 4976839184
+MassSpec Database Version: 16.0
+close session 4976839184
+saving post measurement to secondary database
+saving to massspec database 129.138.12.160/massspecdata
+setting labnumber to 65885
+setting aliquot to 9
+setting step to C
+setting uuid to 8dcbbc18-aa5b-4259-a229-ff05c949d8fc
+setting irradpos to 65885
+setting extract_device to Fusions CO2
+setting tray to 
+setting position to 140
+setting power_requested to 4.5
+setting extract_value to 4.5
+setting duration to 30.0
+setting duration_at_request to 30.0
+setting first_stage_delay to 30.0
+setting cleanup to 30.0
+setting comment to single crystal
+setting irradiation to NM-292
+setting level to C
+setting irradiation_level to C
+setting sample to BIT-245
+setting material to Anorthoclase
+setting project to BIT
+setting mass_spectrometer to Jan
+no attribute chron_dosages
+no attribute production_ratios
+no attribute interference_corrections
+no attribute production_name
+no attribute j
+Reference Isotope=Ar40
+Reference Detector=H1
+%%%%%%%%%%%%%%%%%%%% Comment: single crystal %%%%%%%%%%%%%%%%%%%
+adding isotope Ar41 H2
+add baseline dbdet= Ar41. original det= H2
+get baseline data Ar41 H2
+Get data baseline <pychron.processing.isotope.Baseline object at 0x1432d1b90> len t=120
+baseline Ar41. v=-0.0914520701689, e=0.00266094957027
+get signal data Ar41 H2
+Get data signal Ar41 0.019+/-0.004 len t=400
+adding isotope Ar40 H1
+add baseline dbdet= Ar40. original det= H1
+get baseline data Ar40 H1
+Get data baseline <pychron.processing.isotope.Baseline object at 0x1432d1d50> len t=120
+get handler 129.138.12.153,1061 3
+baseline Ar40. v=0.0874524288135, e=0.00356591538257
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get signal data Ar40 H1
+Get data signal Ar40 24.495+/-0.010 len t=400
+adding isotope Ar39 AX
+add baseline dbdet= Ar39. original det= AX
+get baseline data Ar39 AX
+Get data baseline <pychron.processing.isotope.Baseline object at 0x1432d1f10> len t=120
+baseline Ar39. v=0.105844642236, e=0.00587492645307
+get signal data Ar39 AX
+Get data signal Ar39 3.145+/-0.010 len t=400
+adding isotope Ar38 L1
+add baseline dbdet= Ar38. original det= L1
+get baseline data Ar38 L1
+Get data baseline <pychron.processing.isotope.Baseline object at 0x1432df110> len t=120
+baseline Ar38. v=-0.0321820293857, e=0.00175969148979
+get signal data Ar38 L1
+Get data signal Ar38 0.0555+/-0.0024 len t=400
+adding isotope Ar37 L2
+add baseline dbdet= Ar37. original det= L2
+get baseline data Ar37 L2
+Get data baseline <pychron.processing.isotope.Baseline object at 0x1432df2d0> len t=120
+baseline Ar37. v=-0.00373383562207, e=0.00377711691343
+get signal data Ar37 L2
+Get data signal Ar37 0.079+/-0.005 len t=400
+adding isotope Ar36 CDD
+add baseline dbdet= Ar36. original det= CDD
+get baseline data Ar36 CDD
+Get data baseline <pychron.processing.isotope.Baseline object at 0x1432df490> len t=120
+baseline Ar36. v=7.4172552455e-06, e=2.96378396586e-06
+get signal data Ar36 CDD
+Get data signal Ar36 0.0609+/-0.0005 len t=400
+65885-09C added analysis time 0.68684220314s
+analysis added to mass spec database
+mass spec save time= 0.698
+persistence save - dvc
+================= post measurement started
+create new session 4938974128
+Traceback (most recent call last):
+  File "/Users/jan/Programming/git/pychron_dev/pychron/database/core/database_adapter.py", line 763, in __retrieve
+    return q.one()
+  File "/Users/jan/anaconda/envs/pychron_env/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2361, in one
+    ret = list(self)
+  File "/Users/jan/anaconda/envs/pychron_env/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2404, in __iter__
+    return self._execute_and_instances(context)
+  File "/Users/jan/anaconda/envs/pychron_env/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2419, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/Users/jan/anaconda/envs/pychron_env/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 720, in execute
+    return meth(self, multiparams, params)
+  File "/Users/jan/anaconda/envs/pychron_env/lib/python2.7/site-packages/sqlalchemy/sql/elements.py", line 317, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/Users/jan/anaconda/envs/pychron_env/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 817, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "/Users/jan/anaconda/envs/pychron_env/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 947, in _execute_context
+    context)
+  File "/Users/jan/anaconda/envs/pychron_env/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1108, in _handle_dbapi_exception
+    exc_info
+  File "/Users/jan/anaconda/envs/pychron_env/lib/python2.7/site-packages/sqlalchemy/util/compat.py", line 185, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb)
+  File "/Users/jan/anaconda/envs/pychron_env/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 940, in _execute_context
+    context)
+  File "/Users/jan/anaconda/envs/pychron_env/lib/python2.7/site-packages/sqlalchemy/engine/default.py", line 435, in do_execute
+    cursor.execute(statement, parameters)
+  File "/Users/jan/anaconda/envs/pychron_env/lib/python2.7/site-packages/pymysql/cursors.py", line 146, in execute
+    result = self._query(query)
+  File "/Users/jan/anaconda/envs/pychron_env/lib/python2.7/site-packages/pymysql/cursors.py", line 296, in _query
+    conn.query(q)
+  File "/Users/jan/anaconda/envs/pychron_env/lib/python2.7/site-packages/pymysql/connections.py", line 781, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/Users/jan/anaconda/envs/pychron_env/lib/python2.7/site-packages/pymysql/connections.py", line 942, in _read_query_result
+    result.read()
+  File "/Users/jan/anaconda/envs/pychron_env/lib/python2.7/site-packages/pymysql/connections.py", line 1138, in read
+    first_packet = self.connection._read_packet()
+  File "/Users/jan/anaconda/envs/pychron_env/lib/python2.7/site-packages/pymysql/connections.py", line 895, in _read_packet
+    packet_header = self._read_bytes(4)
+  File "/Users/jan/anaconda/envs/pychron_env/lib/python2.7/site-packages/pymysql/connections.py", line 922, in _read_bytes
+    2013, "Lost connection to MySQL server during query")
+OperationalError: (OperationalError) (2013, 'Lost connection to MySQL server during query') 'SELECT `RepositoryTbl`.name AS `RepositoryTbl_name`, `RepositoryTbl`.`principal_investigatorID` AS `RepositoryTbl_principal_investigatorID` \nFROM `RepositoryTbl` \nWHERE `RepositoryTbl`.name = %s' ('Zimmerer',)
+
+close session 4938974128
+get handler 129.138.12.153,1061 3
+---------------- Experiment Queue saving disabled
+DVC saving peakcenter
+Failed to find a valid peak. No peak greater than 1.0. max = 0.125211754163
+Failed to find a valid peak. No peak greater than 1.0. max = 0.0601745642741
+get handler 129.138.12.153,1061 3
+Smart pull ahead: 0 behind: 0
+Up-to-date with origin
+add to repo msg=modified - ad8224ebc6dbfeb9f5997218dfa5fe690569839d.json
+add to repo msg=modified - 85-09C.json
+add to repo msg=modified - 85-09C.dat.json
+add to repo msg=modified - 85-09C.blan.json
+add to repo msg=modified - 85-09C.inte.json
+add to repo msg=modified - 85-09C.icfa.json
+add to repo msg=modified - 85-09C.base.json
+not at valid file /Users/jan/PychronDev/data/.dvc/repositories/Zimmerer/658/tags/85-09C.tags.json
+add to repo msg=modified - 85-09C.peak.json
+add to repo msg=modified - 85-09C.extr.json
+not at valid file /Users/jan/PychronDev/data/.dvc/repositories/Zimmerer/658/monitor/85-09C.moni.json
+commit message=<COLLECTION>
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+add to repo msg=modified - 85-09C.inte.json
+add to repo msg=modified - 85-09C.base.json
+commit message=<ISOEVO> default collection fits
+add to repo msg=modified - 85-09C.blan.json
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+commit message=<BLANKS> preceding bu-FC-J-8368
+add to repo msg=modified - 85-09C.icfa.json
+commit message=<ICFactor> default
+get handler 129.138.12.153,1061 3
+push repository <pychron.git_archive.repo_manager.GitRepoManager object at 0x1409c86b0>
+pushing to remote=origin, url=https://github.com
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+get handler 129.138.12.153,1061 3
+no changes to meta repo
+create new session 4938974128
+add association Zimmerer
+get identifier "65885"
+setting analysis irradiation position=<pychron.dvc.dvc_orm.IrradiationPositionTbl object at 0x139c5fa90>
+close session 4938974128
+================= post measurement finished
+07:26:19 -- ******* Post Run Check *******
+loading queue conditionals post_run_actions
+loading system conditionals post_run_actions
+loading conditionals from /Users/jan/PychronDev/setupfiles/spectrometer/default_conditionals.yaml
+loading queue conditionals post_run_terminations
+loading system conditionals post_run_terminations
+loading conditionals from /Users/jan/PychronDev/setupfiles/spectrometer/default_conditionals.yaml
+Checking default post run terminations n=1
+GetDeflection CDD ===>> 50
+testing CDD==2000
+evaluate ot="CDD.deflection==2000" t="CDD==2000", ctx="{'CDD': 50.0}"
+07:26:19 -- ******* Post Run Check Passed *******
+07:26:19 -- Automated run 65885-09C success duration: 754.736 s
 ----------------- finish -----------------
-state changed from measurement to failed
 ----------------- stop -----------------
-Measurement Finished unsuccessfully. Aborted=False
-22:55:13 -- ******* Measurement Finished unsuccessfully. Aborted=False *******
-failed execution step Measurement Failed
-measurement did not complete successfully
-22:55:13 -- Automated run 65885-09C failed duration: 440.571 s
------------------ finish -----------------
------------------ stop -----------------
-finish run. runs completed=14
+retroactive repository identifiers disabled
+finish run. runs completed=1
+update duration runid=65885-09C, duration=754.736279011, md5=a5238c40
+loading script "jan_unknown400_120.py"
+loading script "jan_pump_ms.py"
+loading script "jan_co2.py"
+loading script "jan_pump_extraction_line.py"
+testing...
+no interpolation path defined
+executed snippet estimated_duration=539.8, duration=0.000226020812988
+script duration name:unknown400_120 seconds:540.0
+loading script "jan_unknown400_120.py"
+loading script "jan_pump_ms.py"
+loading script "jan_co2.py"
+loading script "jan_pump_extraction_line.py"
+testing...
+no interpolation path defined
+executed snippet estimated_duration=0, duration=2.78949737549e-05
+loading script "jan_unknown400_120.py"
+loading script "jan_pump_ms.py"
+loading script "jan_co2.py"
+loading script "jan_pump_extraction_line.py"
+testing...
+no interpolation path defined
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=0, duration=6.07967376709e-05
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=0, duration=0.000117063522339
+executed snippet estimated_duration=0.0, duration=0.00883316993713
+script duration name:co2 seconds:0.0
+loading script "jan_unknown400_120.py"
+loading script "jan_pump_ms.py"
+loading script "jan_co2.py"
+loading script "jan_pump_extraction_line.py"
+testing...
+no interpolation path defined
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=4.0, duration=0.000242948532104
+executed snippet estimated_duration=4.0, duration=0.00311088562012
+Script duration 540.0
+Run total estimated duration= 541.000
+unknown400_120 in script context. using previous estimated duration
+script duration name:unknown400_120 seconds:540.0
+pump_ms in script context. using previous estimated duration
+co2 in script context. using previous estimated duration
+script duration name:co2 seconds:0.0
+pump_extraction_line in script context. using previous estimated duration
+Script duration 540.0
+Run total estimated duration= 541.000
+script duration name:unknown400_120 seconds:540.0
+script duration name:co2 seconds:0.0
+Script duration 540.0
+Run total estimated duration= 541.000
+script duration name:unknown400_120 seconds:540.0
+script duration name:co2 seconds:0.0
+Script duration 540.0
+Run total estimated duration= 541.000
+script duration name:unknown400_120 seconds:540.0
+loading script "jan_unknown400_120.py"
+loading script "jan_pump_ms.py"
+loading script "jan_sniffair_x2.py"
+loading script "jan_pump_extraction_line.py"
+testing...
+no interpolation path defined
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=0, duration=5.19752502441e-05
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=0, duration=0.000130891799927
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=32.0, duration=0.00019097328186
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=34.0, duration=0.000104188919067
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=4.0, duration=0.000427007675171
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=36.0, duration=0.000109910964966
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=34.0, duration=0.000144004821777
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=4.0, duration=7.79628753662e-05
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=36.0, duration=9.91821289062e-05
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=70.0, duration=9.51290130615e-05
+executed snippet estimated_duration=250.0, duration=0.0379331111908
+script duration name:sniffair_x2 seconds:250.0
+Script duration 790.0
+Run total estimated duration= 791.000
+script duration name:unknown400_120 seconds:540.0
+sniffair_x2 in script context. using previous estimated duration
+script duration name:sniffair_x2 seconds:250.0
+Script duration 790.0
+Run total estimated duration= 791.000
+script duration name:unknown400_120 seconds:540.0
+loading script "jan_unknown400_120.py"
+loading script "jan_pump_ms.py"
+loading script "jan_cocktail_x1.py"
+loading script "jan_pump_extraction_line.py"
+testing...
+no interpolation path defined
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=0, duration=6.41345977783e-05
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=0, duration=0.000131130218506
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=32.0, duration=0.000121831893921
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=34.0, duration=0.000171184539795
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=4.0, duration=0.0001380443573
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=38.0, duration=0.000147104263306
+executed snippet estimated_duration=108.0, duration=0.0260450839996
+script duration name:cocktail_x1 seconds:108.0
+Script duration 648.0
+Run total estimated duration= 649.000
+script duration name:unknown400_120 seconds:540.0
+cocktail_x1 in script context. using previous estimated duration
+script duration name:cocktail_x1 seconds:108.0
+Script duration 648.0
+Run total estimated duration= 649.000
+script duration name:unknown400_120 seconds:540.0
+script duration name:co2 seconds:0.0
+Script duration 540.0
+Run total estimated duration= 541.000
+script duration name:unknown400_120 seconds:540.0
+script duration name:co2 seconds:0.0
+Script duration 540.0
+Run total estimated duration= 541.000
+script duration name:unknown400_120 seconds:540.0
+script duration name:co2 seconds:0.0
+Script duration 540.0
+Run total estimated duration= 541.000
+script duration name:unknown400_120 seconds:540.0
+script duration name:co2 seconds:0.0
+Script duration 540.0
+Run total estimated duration= 541.000
+script duration name:unknown400_120 seconds:540.0
+script duration name:co2 seconds:0.0
+Script duration 540.0
+Run total estimated duration= 541.000
+script duration name:unknown400_120 seconds:540.0
+script duration name:co2 seconds:0.0
+Script duration 540.0
+Run total estimated duration= 541.000
+script duration name:unknown400_120 seconds:540.0
+script duration name:co2 seconds:0.0
+Script duration 540.0
+Run total estimated duration= 541.000
+script duration name:unknown400_120 seconds:540.0
+script duration name:co2 seconds:0.0
+Script duration 540.0
+Run total estimated duration= 541.000
+script duration name:unknown400_120 seconds:540.0
+script duration name:co2 seconds:0.0
+Script duration 540.0
+Run total estimated duration= 541.000
+script duration name:unknown400_120 seconds:540.0
+script duration name:co2 seconds:0.0
+Script duration 540.0
+Run total estimated duration= 541.000
+script duration name:unknown400_120 seconds:540.0
+script duration name:co2 seconds:0.0
+Script duration 540.0
+Run total estimated duration= 541.000
+script duration name:unknown400_120 seconds:540.0
+script duration name:co2 seconds:0.0
+Script duration 540.0
+Run total estimated duration= 541.000
+script duration name:unknown400_120 seconds:540.0
+script duration name:co2 seconds:0.0
+Script duration 540.0
+Run total estimated duration= 541.000
+script duration name:unknown400_120 seconds:540.0
+script duration name:co2 seconds:0.0
+Script duration 540.0
+Run total estimated duration= 541.000
+script duration name:unknown400_120 seconds:540.0
+script duration name:co2 seconds:0.0
+Script duration 540.0
+Run total estimated duration= 541.000
+script duration name:unknown400_120 seconds:540.0
+script duration name:co2 seconds:0.0
+Script duration 540.0
+Run total estimated duration= 541.000
+script duration name:unknown400_120 seconds:540.0
+script duration name:co2 seconds:0.0
+Script duration 540.0
+Run total estimated duration= 541.000
+script duration name:unknown400_120 seconds:540.0
+script duration name:co2 seconds:0.0
+Script duration 540.0
+Run total estimated duration= 541.000
+script duration name:unknown400_120 seconds:540.0
+script duration name:co2 seconds:0.0
+Script duration 540.0
+Run total estimated duration= 541.000
+script duration name:unknown400_120 seconds:540.0
+script duration name:co2 seconds:0.0
+Script duration 540.0
+Run total estimated duration= 541.000
+script duration name:unknown400_120 seconds:540.0
+script duration name:co2 seconds:0.0
+Script duration 540.0
+Run total estimated duration= 541.000
+script duration name:unknown400_120 seconds:540.0
+script duration name:co2 seconds:0.0
+Script duration 540.0
+Run total estimated duration= 541.000
+script duration name:unknown400_120 seconds:540.0
+script duration name:co2 seconds:0.0
+Script duration 540.0
+Run total estimated duration= 541.000
+script duration name:unknown400_120 seconds:540.0
+script duration name:co2 seconds:0.0
+Script duration 540.0
+Run total estimated duration= 541.000
+script duration name:unknown400_120 seconds:540.0
+script duration name:co2 seconds:0.0
+Script duration 540.0
+Run total estimated duration= 541.000
+script duration name:unknown400_120 seconds:540.0
+script duration name:co2 seconds:0.0
+Script duration 540.0
+Run total estimated duration= 541.000
+script duration name:unknown400_120 seconds:540.0
+script duration name:co2 seconds:0.0
+Script duration 540.0
+Run total estimated duration= 541.000
+script duration name:unknown400_120 seconds:540.0
+script duration name:sniffair_x2 seconds:250.0
+Script duration 790.0
+Run total estimated duration= 791.000
+script duration name:unknown400_120 seconds:540.0
+script duration name:sniffair_x2 seconds:250.0
+Script duration 790.0
+Run total estimated duration= 791.000
+script duration name:unknown400_120 seconds:540.0
+script duration name:cocktail_x1 seconds:108.0
+Script duration 648.0
+Run total estimated duration= 649.000
+script duration name:unknown400_120 seconds:540.0
+script duration name:cocktail_x1 seconds:108.0
+Script duration 648.0
+Run total estimated duration= 649.000
+nruns=39 before=5.0, run_dur=22531.0, btw=995.0
 write rem/ex queues
 /Users/jan/PychronDev/experiments/rem/CurrentExperiment.rem.txt
 /Users/jan/PychronDev/experiments/rem/CurrentExperiment.ex.txt
+get handler 129.138.12.153,1061 3
 doing event level: 3
 add run
