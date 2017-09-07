@@ -1,0 +1,2817 @@
+do run
+loading script "jan_unknown400_120.py"
+loading script "jan_pump_ms.py"
+loading script "jan_co2.py"
+loading script "jan_pump_extraction_line.py"
+testing...
+no interpolation path defined
+executed snippet estimated_duration=539.8, duration=0.000195026397705
+script duration name:unknown400_120 seconds:540.0
+loading script "jan_unknown400_120.py"
+loading script "jan_pump_ms.py"
+loading script "jan_co2.py"
+loading script "jan_pump_extraction_line.py"
+testing...
+no interpolation path defined
+executed snippet estimated_duration=0, duration=2.19345092773e-05
+loading script "jan_unknown400_120.py"
+loading script "jan_pump_ms.py"
+loading script "jan_co2.py"
+loading script "jan_pump_extraction_line.py"
+testing...
+no interpolation path defined
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=0, duration=5.60283660889e-05
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=0, duration=9.91821289062e-05
+executed snippet estimated_duration=0.0, duration=0.00218605995178
+script duration name:co2 seconds:0.0
+loading script "jan_unknown400_120.py"
+loading script "jan_pump_ms.py"
+loading script "jan_co2.py"
+loading script "jan_pump_extraction_line.py"
+testing...
+no interpolation path defined
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=4.0, duration=0.000133991241455
+executed snippet estimated_duration=4.0, duration=0.00116395950317
+Script duration 540.0
+Run total estimated duration= 541.000
+run duration: 0:09:01
+doing event level: 2
+23:58:04 -- Setting default integration. t=1.048576
+setting integration time = 1.048576
+SetIntegrationTime 1.048576 ===>> OK
+----------------- start -----------------
+**************** Experiment Type: Ar/Ar, Ar/Ar
+create new session 4961592240
+close session 4961592240
+$$$$$ Clearing conditionals
+adding conditionals 
+Add queue conditionals
+add default conditionals
+adding default conditionals from /Users/jan/PychronDev/setupfiles/spectrometer/default_conditionals.yaml
+Start automated run 65885-12D
+loading script "jan_unknown400_120.py"
+loading script "jan_pump_ms.py"
+loading script "jan_co2.py"
+loading script "jan_pump_extraction_line.py"
+%%%%%%%%%%%%%%%%%% setting automated run 65885-12D
+No value "sensitivity_multiplier" in metadata
+$$$$$$$$$$$$$$$ auto_save_detector_ic=False
+============================= Pre Extraction Check =============================
+loading queue conditionals pre_run_terminations
+loading system conditionals pre_run_terminations
+loading conditionals from /Users/jan/PychronDev/setupfiles/spectrometer/default_conditionals.yaml
+23:58:04 -- ******* Pre Extraction Check *******
+Get a measurement from the spectrometer
+Pre Extraction Termination data. keys=H2,H1,AX,L1,L2,CDD, signals=-0.13708,0.09298,0.11242,-0.02487,0.09321,0.00341
+23:58:04 -- testing system defined conditionals
+Checking default pre extraction terminations n=2
+testing CDD
+evaluate ot="CDD.inactive" t="CDD", ctx="{'CDD': False}"
+GetDeflection CDD ===>> 50
+testing CDD==2000
+evaluate ot="CDD.deflection==2000" t="CDD==2000", ctx="{'CDD': 50.0}"
+23:58:04 -- ******* Pre Extraction Check Passed *******
+=================================================================================
+23:58:04 -- stopping status monitor
+stop 4939968048
+Status monitor stopped
+Status monitor finished
+23:58:06 -- starting status monitor
+start 4939968048
+StatusMonitor period=1. Frequencies(state=2, checksum=3, lock=5, owner=5)
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+start extraction
+do extraction
+Analysis started at 23:58:07.739678
+Extraction Started jan_co2.py
+23:58:07 -- ******* Extraction Started jan_co2.py *******
+state changed from not run to extraction
+DO EXTRACTION <pychron.extraction_line.pyscript_runner.RemotePyScriptRunner object at 0x1293b5dd0>
+testing...
+no interpolation path defined
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=0, duration=4.41074371338e-05
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=0, duration=0.000208854675293
+executed snippet estimated_duration=100.0, duration=0.00290107727051
+Jan CO2 laser analysis
+doing GOSUB
+testing...
+no interpolation path defined
+executed snippet estimated_duration=0, duration=3.79085540771e-05
+Waiting for CO2 access
+wait ('FelixCO2Flag', 0) {}
+waiting for FelixCO2Flag = 0
+get handler cmd=Read FelixCO2Flag, 129.138.12.153,1061 3
+Read FelixCO2Flag ===>> 0
+finished waiting
+CO2 free
+wait ('CO2PumpTimeFlag', 0) {}
+waiting for CO2PumpTimeFlag = 0
+get handler cmd=Read CO2PumpTimeFlag, 129.138.12.153,1061 3
+Read CO2PumpTimeFlag ===>> 0
+finished waiting
+acquire ('JanCO2Flag',) {'clear': True}
+acquire JanCO2Flag
+get handler cmd=---, 129.138.12.153,1061 1.0
+Set JanCO2Flag 1 ===>> OK
+JanCO2Flag acquired
+set extraction state False (0.75, 'red', 1.5)
+CO2 acquired
+executed snippet estimated_duration=0, duration=0.0179998874664
+WaitForCO2Access.py completed successfully
+gosub finished
+doing GOSUB
+testing...
+no interpolation path defined
+executed snippet estimated_duration=0, duration=0.000144004821777
+Prepare for CO2 analysis
+close () {'description': 'Jan Inlet'}
+close name=--- desc=Jan Inlet
+checking ownership. requestor=129.138.12.150
+check software interlocks R
+interlocks []
+actuate state mode=None-script, software_lock=False
+doing actuation None-script close_channel False
+get handler cmd=Close R, 129.138.12.153,1061 3
+Close R ===>> OK
+get handler cmd=GetIndicatorState R, 129.138.12.153,1061 3
+GetIndicatorState R ===>> False
+change switch state (True, True)
+23:58:08 -- CLOSE  VALVE-R (Jan Inlet)
+-------------------------- close None (Jan Inlet) result=[(True, True)]
+action=close, ok=True, locked=[False]
+open () {'description': 'Jan Ion Pump'}
+open name=--- desc=Jan Ion Pump
+checking ownership. requestor=129.138.12.150
+check software interlocks O
+interlocks []
+actuate state mode=None-script, software_lock=False
+doing actuation None-script open_channel False
+get handler cmd=Open O, 129.138.12.153,1061 3
+Open O ===>> OK
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetIndicatorState O, 129.138.12.153,1061 3
+GetIndicatorState O ===>> OK
+change switch state (True, True)
+23:58:08 -- OPEN   VALVE-O (Jan Ion Pump)
+-------------------------- open None (Jan Ion Pump) result=[(True, True)]
+action=open, ok=True, locked=[False]
+close () {'description': 'Microbone to Minibone'}
+close name=--- desc=Microbone to Minibone
+checking ownership. requestor=129.138.12.150
+check software interlocks L
+interlocks []
+actuate state mode=None-script, software_lock=False
+doing actuation None-script close_channel False
+get handler cmd=Close L, 129.138.12.153,1061 3
+Close L ===>> OK
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetIndicatorState L, 129.138.12.153,1061 3
+GetIndicatorState L ===>> False
+change switch state (True, True)
+23:58:09 -- CLOSE  VALVE-L (Microbone to Minibone)
+-------------------------- close None (Microbone to Minibone) result=[(True, True)]
+action=close, ok=True, locked=[False]
+open () {'description': 'Microbone to Turbo'}
+open name=--- desc=Microbone to Turbo
+checking ownership. requestor=129.138.12.150
+check software interlocks U
+interlocks []
+actuate state mode=None-script, software_lock=False
+doing actuation None-script open_channel False
+get handler cmd=Open U, 129.138.12.153,1061 3
+Open U ===>> OK
+get handler cmd=GetIndicatorState U, 129.138.12.153,1061 3
+GetIndicatorState U ===>> OK
+change switch state (True, True)
+23:58:10 -- OPEN   VALVE-U (Microbone to Turbo)
+-------------------------- open None (Microbone to Turbo) result=[(True, True)]
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+action=open, ok=True, locked=[False]
+open () {'description': 'Microbone to Inlet Pipette'}
+open name=--- desc=Microbone to Inlet Pipette
+checking ownership. requestor=129.138.12.150
+check software interlocks S
+interlocks []
+actuate state mode=None-script, software_lock=False
+doing actuation None-script open_channel False
+get handler cmd=Open S, 129.138.12.153,1061 3
+Open S ===>> OK
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetIndicatorState S, 129.138.12.153,1061 3
+GetIndicatorState S ===>> OK
+change switch state (True, True)
+23:58:10 -- OPEN   VALVE-S (Microbone to Inlet Pipette)
+-------------------------- open None (Microbone to Inlet Pipette) result=[(True, True)]
+action=open, ok=True, locked=[False]
+open () {'description': 'Microbone to Getter D-50'}
+open name=--- desc=Microbone to Getter D-50
+checking ownership. requestor=129.138.12.150
+check software interlocks K
+interlocks []
+actuate state mode=None-script, software_lock=False
+doing actuation None-script open_channel False
+get handler cmd=Open K, 129.138.12.153,1061 3
+Open K ===>> OK
+get handler cmd=GetIndicatorState K, 129.138.12.153,1061 3
+GetIndicatorState K ===>> OK
+change switch state (True, True)
+23:58:11 -- OPEN   VALVE-K (Microbone to Getter D-50)
+-------------------------- open None (Microbone to Getter D-50) result=[(True, True)]
+action=open, ok=True, locked=[False]
+open () {'description': 'Microbone to Getter NP-10'}
+open name=--- desc=Microbone to Getter NP-10
+checking ownership. requestor=129.138.12.150
+check software interlocks M
+interlocks []
+actuate state mode=None-script, software_lock=False
+doing actuation None-script open_channel False
+get handler cmd=Open M, 129.138.12.153,1061 3
+Open M ===>> OK
+get handler cmd=GetIndicatorState M, 129.138.12.153,1061 3
+GetIndicatorState M ===>> OK
+change switch state (True, True)
+23:58:11 -- OPEN   VALVE-M (Microbone to Getter NP-10)
+-------------------------- open None (Microbone to Getter NP-10) result=[(True, True)]
+action=open, ok=True, locked=[False]
+close () {'description': 'CO2 Laser to Felix'}
+close name=--- desc=CO2 Laser to Felix
+checking ownership. requestor=129.138.12.150
+check software interlocks F
+interlocks []
+actuate state mode=None-script, software_lock=True
+VALVE-F(CO2 Laser to Felix) software locked
+change switch state (True, False)
+-------------------------- close None (CO2 Laser to Felix) result=[(True, False)]
+action=close, ok=True, locked=[True]
+open () {'description': 'CO2 Laser to Jan'}
+open name=--- desc=CO2 Laser to Jan
+checking ownership. requestor=129.138.12.150
+check software interlocks A
+interlocks []
+actuate state mode=None-script, software_lock=False
+doing actuation None-script open_channel False
+get handler cmd=Open A, 129.138.12.153,1061 3
+Open A ===>> OK
+get handler cmd=GetIndicatorState A, 129.138.12.153,1061 3
+GetIndicatorState A ===>> OK
+change switch state (True, True)
+23:58:12 -- OPEN   VALVE-A (CO2 Laser to Jan)
+-------------------------- open None (CO2 Laser to Jan) result=[(True, True)]
+action=open, ok=True, locked=[False]
+open () {'description': 'Microbone to CO2 Laser'}
+open name=--- desc=Microbone to CO2 Laser
+checking ownership. requestor=129.138.12.150
+check software interlocks T
+interlocks []
+actuate state mode=None-script, software_lock=False
+doing actuation None-script open_channel False
+get handler cmd=Open T, 129.138.12.153,1061 3
+Open T ===>> OK
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetIndicatorState T, 129.138.12.153,1061 3
+GetIndicatorState T ===>> OK
+change switch state (True, True)
+23:58:12 -- OPEN   VALVE-T (Microbone to CO2 Laser)
+-------------------------- open None (Microbone to CO2 Laser) result=[(True, True)]
+action=open, ok=True, locked=[False]
+executed snippet estimated_duration=0, duration=5.35804796219
+PrepareForCO2Analysis.py completed successfully
+gosub finished
+set_motor ('beam', '1.25') {}
+setting motor "beam" to 1.25
+set motor beam to 1.25
+get handler cmd=SetMotor beam,1.25, 129.138.12.133,1063 3
+SetMotor beam,1.25 ===>> OK
+get handler cmd=GetMotorMoving beam, 129.138.12.133,1063 3
+GetMotorMoving beam ===>> False
+get handler cmd=GetMotorMoving beam, 129.138.12.133,1063 3
+GetMotorMoving beam ===>> False
+Block completed
+move_to_position ('143',) {'autocenter': True}
+FusionsCO2 move to position 143
+sending GoToHole 143,True
+get handler cmd=GoToHole 143,True, 129.138.12.133,1063 3
+GoToHole 143,True ===>> OK
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetDriveMoving, 129.138.12.133,1063 3
+GetDriveMoving ===>> False
+get handler cmd=GetDriveMoving, 129.138.12.133,1063 3
+GetDriveMoving ===>> OK
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetDriveMoving, 129.138.12.133,1063 3
+GetDriveMoving ===>> OK
+get handler cmd=GetDriveMoving, 129.138.12.133,1063 3
+GetDriveMoving ===>> OK
+get handler cmd=GetDriveMoving, 129.138.12.133,1063 3
+GetDriveMoving ===>> OK
+get handler cmd=GetDriveMoving, 129.138.12.133,1063 3
+GetDriveMoving ===>> OK
+get handler cmd=GetDriveMoving, 129.138.12.133,1063 3
+GetDriveMoving ===>> False
+Block completed
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetAutoCorrecting, 129.138.12.133,1063 3
+GetAutoCorrecting ===>> False
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+get handler cmd=GetAutoCorrecting, 129.138.12.133,1063 3
+GetAutoCorrecting ===>> False
+Block completed
+update position
+get handler cmd=GetPosition, 129.138.12.133,1063 3
+GetPosition ===>> -3.98780,-3.98780,1.00000
+got position (-3.9878, -3.9878, 1.0)
+move to position succeeded
+sleep (5,) {}
+SLEEP 5.0
+block started
+WaitControl setup for 5.0  
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+Join finished
+block finished. duration 5.04749298096
+close () {'description': 'Microbone to Turbo'}
+close name=--- desc=Microbone to Turbo
+checking ownership. requestor=129.138.12.150
+check software interlocks U
+interlocks []
+actuate state mode=None-script, software_lock=False
+doing actuation None-script close_channel True
+get handler cmd=Close U, 129.138.12.153,1061 3
+Close U ===>> OK
+get handler cmd=GetIndicatorState U, 129.138.12.153,1061 3
+GetIndicatorState U ===>> False
+change switch state (True, True)
+23:58:22 -- CLOSE  VALVE-U (Microbone to Turbo)
+-------------------------- close None (Microbone to Turbo) result=[(True, True)]
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+action=close, ok=True, locked=[False]
+enable laser
+enable () {}
+set extraction state FusionsCO2 Enabled (False, 'red', 1.5)
+enabling laser
+get handler cmd=Enable, 129.138.12.133,1063 3
+Enable ===>> OK
+begin interval
+BEGIN INTERVAL Interval 1 waiting for 30.0
+block started
+set extract to 4.5
+WaitControl setup for 30.0  
+extract (4.5,) {}
+get handler cmd=GetPosition, 129.138.12.133,1063 3
+GetPosition ===>> -3.98780,-3.98780,1.00000
+set extraction state FusionsCO2 ON! 4.5(watts) (0.75, 'red', 1.5)
+extract sample to 4.5 (watts)
+set laser output
+get handler cmd=SetLaserOutput 4.5,watts, 129.138.12.133,1063 3
+SetLaserOutput 4.5,watts ===>> OK
+executing pattern triangle.lp
+execute_pattern ('triangle.lp',) {}
+executing pattern triangle.lp
+get handler cmd=DoPattern triangle.lp, 129.138.12.133,1063 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+get handler cmd=IsPatterning, 129.138.12.133,1063 3
+IsPatterning ===>> OK
+get handler cmd=IsPatterning, 129.138.12.133,1063 3
+IsPatterning ===>> OK
+get handler cmd=IsPatterning, 129.138.12.133,1063 3
+IsPatterning ===>> OK
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=IsPatterning, 129.138.12.133,1063 3
+IsPatterning ===>> OK
+get handler cmd=IsPatterning, 129.138.12.133,1063 3
+IsPatterning ===>> OK
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+set states for children of Q. state=False
+refresh_canvas_needed fired
+get handler cmd=IsPatterning, 129.138.12.133,1063 3
+IsPatterning ===>> OK
+get handler cmd=IsPatterning, 129.138.12.133,1063 3
+IsPatterning ===>> OK
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+get handler cmd=IsPatterning, 129.138.12.133,1063 3
+IsPatterning ===>> OK
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+State checksums do not match. Local:303506562 Remote:1549625112
+State checksum failed
+get handler cmd=IsPatterning, 129.138.12.133,1063 3
+IsPatterning ===>> OK
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+set states for children of B. state=False
+set states for children of D. state=False
+set states for children of I. state=True
+refresh_canvas_needed fired
+get handler cmd=IsPatterning, 129.138.12.133,1063 3
+IsPatterning ===>> OK
+get handler cmd=IsPatterning, 129.138.12.133,1063 3
+IsPatterning ===>> OK
+get handler cmd=IsPatterning, 129.138.12.133,1063 3
+IsPatterning ===>> OK
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+set states for children of W. state=True
+refresh_canvas_needed fired
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=IsPatterning, 129.138.12.133,1063 3
+IsPatterning ===>> OK
+get handler cmd=IsPatterning, 129.138.12.133,1063 3
+IsPatterning ===>> OK
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=IsPatterning, 129.138.12.133,1063 3
+IsPatterning ===>> OK
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+get handler cmd=IsPatterning, 129.138.12.133,1063 3
+IsPatterning ===>> OK
+get handler cmd=IsPatterning, 129.138.12.133,1063 3
+IsPatterning ===>> OK
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=IsPatterning, 129.138.12.133,1063 3
+IsPatterning ===>> OK
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=IsPatterning, 129.138.12.133,1063 3
+IsPatterning ===>> OK
+get handler cmd=IsPatterning, 129.138.12.133,1063 3
+IsPatterning ===>> OK
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=IsPatterning, 129.138.12.133,1063 3
+IsPatterning ===>> OK
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=IsPatterning, 129.138.12.133,1063 3
+IsPatterning ===>> OK
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+get handler cmd=IsPatterning, 129.138.12.133,1063 3
+IsPatterning ===>> OK
+get handler cmd=IsPatterning, 129.138.12.133,1063 3
+IsPatterning ===>> OK
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=IsPatterning, 129.138.12.133,1063 3
+IsPatterning ===>> OK
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=IsPatterning, 129.138.12.133,1063 3
+IsPatterning ===>> OK
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+set states for children of W. state=False
+refresh_canvas_needed fired
+get handler cmd=IsPatterning, 129.138.12.133,1063 3
+IsPatterning ===>> False
+get handler cmd=IsPatterning, 129.138.12.133,1063 3
+IsPatterning ===>> False
+Block completed
+COMPLETE INTERVAL waiting for Interval 1 to complete
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+Join finished
+block finished. duration 30.1120619774
+Interval 1 finished
+end_extract () {}
+ending extraction. set laser power to 0
+set laser power 0
+get handler cmd=SetLaserPower 0, 129.138.12.133,1063 3
+SetLaserPower 0 ===>> OK
+disable () {}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% disable
+set extraction state False (0.75, 'red', 1.5)
+disabling laser
+get handler cmd=Disable, 129.138.12.133,1063 3
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+Disable ===>> OK
+sleep (30.0,) {}
+SLEEP 30.0
+block started
+WaitControl setup for 30.0  
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+set states for children of C. state=False
+set states for children of P. state=False
+refresh_canvas_needed fired
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+set states for children of W. state=True
+refresh_canvas_needed fired
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+Join finished
+block finished. duration 30.1698000431
+executed snippet estimated_duration=166.5, duration=76.3717241287
+jan_co2.py completed successfully
+get handler cmd=GetAchievedOutput, 129.138.12.133,1063 3
+GetAchievedOutput ===>> No Response
+Requested Output= 0.000
+Achieved Output=  0.000
+get handler cmd=GetResponseBlob, 129.138.12.133,1063 3
+GetResponseBlob ===>> No Response
+get handler cmd=GetOutputBlob, 129.138.12.133,1063 3
+GetOutputBlob ===>> No Response
+persistence save...
+persistence save - db
+AutomatedRunPersister post_extraction_save deprecated
+persistence save - dvc
+no extraction position for 143
+not connected to db mysql://janexp@129.138.12.160/labspy
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+Enviromentals: {'lab_humiditys': [{'device': 'EnvironmentalMonitor',
+                    'name': 'Lab Hum.',
+                    'pub_date': '2017-09-06T23:51:40',
+                    'title': 'iServer Hum.',
+                    'value': 41.6}],
+ 'lab_pneumatics': [{'device': 'AirPressure',
+                     'name': 'Pressure',
+                     'pub_date': '2017-09-06T23:59:17',
+                     'title': None,
+                     'value': 107.7},
+                    {'device': 'AirPressure2',
+                     'name': 'Pressure2',
+                     'pub_date': '2017-09-06T23:59:18',
+                     'title': None,
+                     'value': 110.24884}],
+ 'lab_temperatures': [{'device': 'Coldfinger',
+                       'name': 'ColdFinger Temp.',
+                       'pub_date': '2017-09-06T23:38:30',
+                       'title': None,
+                       'value': -196.0},
+                      {'device': 'EnvironmentalMonitor',
+                       'name': 'Lab Temp.',
+                       'pub_date': '2017-09-06T22:53:54',
+                       'title': 'iServer Temp.',
+                       'value': 72.8},
+                      {'device': 'Chiller',
+                       'name': 'Coolant Temp.',
+                       'pub_date': '2017-09-06T23:57:22',
+                       'title': None,
+                       'value': 18.0}]}
+Extraction Finished
+23:59:26 -- ******* Extraction Finished *******
+no overlap. not waiting for min ms pumptime
+23:59:26 -- Sending spectrometer configuration
+======== Sending configuration ========
+SetDeflection CDD,50.0 ===>> OK
+SetDeflection H2,0.0 ===>> OK
+SetDeflection H1,0.0 ===>> OK
+SetDeflection L2,825.0 ===>> OK
+SetDeflection L1,400.0 ===>> OK
+SetDeflection AX,190.0 ===>> OK
+SetZFocus 74.64 ===>> OK
+SetZSymmetry -50.72 ===>> OK
+SetExtractionLens 26.13 ===>> OK
+SetIonRepeller -3.81 ===>> OK
+SetElectronEnergy 75.08 ===>> OK
+SetYSymmetry -2.81 ===>> OK
+SetIonCounterVoltage 1590.0 ===>> OK
+send trap current 200.0
+GetParameter Trap Current Readback ===>> 198.482695477019
+SetParameter Trap Current Set,200.0 ===>> OK
+updating mftable name mftable
+Using mftable located at /Users/jan/PychronDev/setupfiles/spectrometer/mftables/mftable.csv
+============ MFtable ===========
+Isotope  H2     H1     AX     L1     L2     CDD    
+Ar40     6.0546 5.8782 5.9920 6.1931 6.2294 6.6784
+Ar39     6.0095 5.7691 6.0560 6.3362 6.1121 6.5649
+Ar36     5.6870 5.4381 5.7194 5.9951 5.7671 6.2160
+================================
+get initial guess parabolic
+get initial guess parabolic
+get initial guess parabolic
+get initial guess parabolic
+get initial guess parabolic
+get initial guess parabolic
+======== Configuration Finished ========
+GetYSymmetry ===>> -2.81
+GetZSymmetry ===>> -50.72
+GetParameter Trap Current Readback ===>> 198.147042666178
+GetHighVoltage ===>> 4499.94659342336
+start measurement
+do measurement
+L#=65885 analysis type=unknown
+Measurement Started jan_unknown400_120.py
+23:59:26 -- ******* Measurement Started jan_unknown400_120.py *******
+state changed from extraction to measurement
+setting trap, emission, spec, defl, and gains
+GetExtractionLens ===>> 26.13
+GetYSymmetry ===>> -2.81
+GetZSymmetry ===>> -50.72
+GetZFocus ===>> 74.64
+GetDeflection H2 ===>> 0
+GetDeflection H1 ===>> 0
+GetDeflection AX ===>> 190
+GetDeflection L1 ===>> 400
+GetDeflection L2 ===>> 825
+GetDeflection CDD ===>> 50
+GetGain H2 ===>> 0.0113
+GetGain H1 ===>> 0.1
+GetGain AX ===>> 0.09645
+GetGain L1 ===>> 0.010309
+GetGain L2 ===>> 0.091218
+GetGain CDD ===>> 0
+GetParameter Trap Current Readback ===>> 197.699505585058
+GetParameter Source Current Readback ===>> 551.684978331197
+pre measurement save
+New frame /Users/jan/PychronDev/data/isotopes/8c/1d26fb-cb0e-4204-9732-58312a0f3dc4.h5
+flush and close file /Users/jan/PychronDev/data/isotopes/8c/1d26fb-cb0e-4204-9732-58312a0f3dc4.h5
+testing...
+no interpolation path defined
+executed snippet estimated_duration=552.28, duration=0.000268220901489
+unknown measurement script
+activate_detectors ('H2', 'H1', 'AX', 'L1', 'L2', 'CDD') {}
+activate detectors
+*************** Set Analysis View Ar/Ar
+create graphs
+clearing graphs
+clear isotope group
+setting isotope det=H2, iso=Ar41
+setting isotope det=H1, iso=Ar40
+setting isotope det=AX, iso=Ar39
+setting isotope det=L1, iso=Ar38
+setting isotope det=L2, iso=Ar37
+setting isotope det=CDD, iso=Ar36
+setting previous blanks
+ - setting Ar41 blank 0.029+/-0.004
+ - setting Ar40 blank 0.415+/-0.007
+ - setting Ar36 blank 0.00388+/-0.00018
+ - setting Ar37 blank 0.057+/-0.005
+ - setting Ar38 blank 0.0078+/-0.0023
+ - setting Ar39 blank 0.011+/-0.009
+load analysis view
+position_magnet ('Ar40',) {'detector': 'H1'}
+detector Detector(H1)
+POSITION Ar40 H1
+molweights={'Ar41': 41.0, 'Ar40': 39.9624, 'Ar42': 42.0, 'Ar35': 35.0, 'Ar36': 35.9675, 'Ar37': 36.9668, 'Ar38': 37.9627, 'Ar39': 38.964}
+setting detector H2 to Ar41 (40.9624)
+setting detector H1 to Ar40 (39.9624)
+setting detector AX to Ar39 (38.9624)
+setting detector L1 to Ar38 (37.9624)
+setting detector L2 to Ar37 (36.9624)
+setting detector CDD to Ar36 (35.9624)
+Mapping mass to dac mass func: "parabolic"
+H1 map mass coeffs = [ -3.11428344e-04   1.33794662e-01   1.02875323e+00]
+H1 map mass to dac 39.9624 >> 5.87816
+GetDeflection H1 ===>> 0
+GetHighVoltage ===>> 4499.94659342336
+positioning Ar40 (5.87812538407) on H1
+setting magnet DAC
+current  : 5.878125
+requested: 5.878125
+Delta Dac: 0.000000
+Checking detector protection. dv=0.00000
+Checking detector "CDD". Protection Threshold: 0.5 (V)
+SetMagnetDAC 5.87812538407 ===>> OK
+Magnet settling time: 0.500 0.500
+Magnet settling complete
+set_dac. change=True
+equilibrate () {'delay': 3, 'inlet': 'R', 'outlet': 'O', 'eqtime': 12.0}
+Equilibration Started
+23:59:28 -- ******* Equilibration Started *******
+checking ownership. requestor=129.138.12.150
+check software interlocks O
+interlocks []
+actuate state mode=None-script, software_lock=False
+doing actuation None-script close_channel True
+get handler cmd=Close O, 129.138.12.153,1061 3
+update labels <pychron.experiment.plot_panel.PlotPanel object at 0x15bb6cf50>
+update labels "<pychron.graph.stacked_regression_graph.StackedRegressionGraph object at 0x15bb7def0>"
+setting label 0 H2 Ar41
+setting label 1 H1 Ar40
+setting label 2 AX Ar39
+setting label 3 L1 Ar38
+setting label 4 L2 Ar37
+setting label 5 CDD Ar36
+update labels "<pychron.graph.stacked_graph.StackedGraph object at 0x15bb7da70>"
+setting label 0 H2 Ar41
+setting label 1 H1 Ar40
+setting label 2 AX Ar39
+setting label 3 L1 Ar38
+setting label 4 L2 Ar37
+setting label 5 CDD Ar36
+Close O ===>> OK
+get handler cmd=GetIndicatorState O, 129.138.12.153,1061 3
+GetIndicatorState O ===>> False
+change switch state (True, True)
+23:59:28 -- CLOSE  VALVE-O (Jan Ion Pump)
+waiting 3s before opening inlet value ('R',)
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+State checksums do not match. Local:999634605 Remote:400491337
+State checksum failed
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+checking ownership. requestor=129.138.12.150
+check software interlocks R
+interlocks []
+actuate state mode=None-script, software_lock=False
+doing actuation None-script open_channel True
+get handler cmd=Open R, 129.138.12.153,1061 3
+Open R ===>> OK
+get handler cmd=GetIndicatorState R, 129.138.12.153,1061 3
+GetIndicatorState R ===>> OK
+change switch state (True, True)
+23:59:31 -- OPEN   VALVE-R (Jan Inlet)
+set_time_zero () {}
+equilibrating for 12.0sec
+sniff (12.0,) {}
+py_sniff
+build tables- sniff [Detector(H2), Detector(H1), Detector(AX), Detector(L1), Detector(L2), Detector(CDD)]
+add group /sniff/Ar41 (Group) '' table H2
+add group /sniff/Ar40 (Group) '' table H1
+add group /sniff/Ar39 (Group) '' table AX
+add group /sniff/Ar38 (Group) '' table L1
+add group /sniff/Ar37 (Group) '' table L2
+add group /sniff/Ar36 (Group) '' table CDD
+flush and close file /Users/jan/PychronDev/data/isotopes/8c/1d26fb-cb0e-4204-9732-58312a0f3dc4.h5
+measuring sniff. ncounts=12.0
+"sniff" increment series count="1" fit count="0" regressing="False"
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+set states for children of W. state=False
+refresh_canvas_needed fired
+starting measurement
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+Equilibration Finished
+23:59:44 -- ******* Equilibration Finished *******
+checking ownership. requestor=129.138.12.150
+check software interlocks R
+interlocks []
+actuate state mode=None-script, software_lock=False
+doing actuation None-script close_channel True
+get handler cmd=Close R, 129.138.12.153,1061 3
+Close R ===>> OK
+get handler cmd=GetIndicatorState R, 129.138.12.153,1061 3
+GetIndicatorState R ===>> False
+change switch state (True, True)
+23:59:44 -- CLOSE  VALVE-R (Jan Inlet)
+Post Equilibration Started jan_pump_extraction_line.py
+23:59:44 -- ******* Post Equilibration Started jan_pump_extraction_line.py *******
+testing...
+no interpolation path defined
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=4.0, duration=0.000139951705933
+executed snippet estimated_duration=4.0, duration=0.00127291679382
+Pump after analysis
+doing GOSUB
+testing...
+no interpolation path defined
+executed snippet estimated_duration=4.0, duration=0.000128030776978
+Pump Microbone
+close () {'description': 'Jan Inlet'}
+close name=--- desc=Jan Inlet
+checking ownership. requestor=129.138.12.150
+check software interlocks R
+interlocks []
+actuate state mode=None-script, software_lock=False
+doing actuation None-script close_channel False
+get handler cmd=Close R, 129.138.12.153,1061 3
+waiting for write to finish
+measurement finished
+estimated time: 12.583 actual time: :12.708
+flush and close file /Users/jan/PychronDev/data/isotopes/8c/1d26fb-cb0e-4204-9732-58312a0f3dc4.h5
+set_fits () {}
+using default fits file=/Users/jan/PychronDev/scripts/measurement/fits/nominal.yaml
+set "Ar41" to "('linear', 'SEM')"
+set "Ar40" to "('Parabolic', 'SEM')"
+set "Ar36" to "('Parabolic', 'SEM')"
+set "Ar37" to "('linear', 'SEM')"
+set "Ar38" to "('linear', 'SEM')"
+set "Ar39" to "('Parabolic', 'SEM')"
+set_baseline_fits () {}
+using default fits file=/Users/jan/PychronDev/scripts/measurement/fits/nominal.yaml
+set "H2" to "('average', 'SEM')"
+set "H1" to "('average', 'SEM')"
+set "CDD" to "('average', 'SEM')"
+set "L2" to "('average', 'SEM')"
+set "L1" to "('average', 'SEM')"
+set "AX" to "('average', 'SEM')"
+multicollect () {'integration_time': 1, 'ncounts': 400}
+build tables- signal [Detector(H2), Detector(H1), Detector(AX), Detector(L1), Detector(L2), Detector(CDD)]
+add group /signal/Ar41 (Group) '' table H2
+add group /signal/Ar40 (Group) '' table H1
+add group /signal/Ar39 (Group) '' table AX
+add group /signal/Ar38 (Group) '' table L1
+add group /signal/Ar37 (Group) '' table L2
+Close R ===>> OK
+add group /signal/Ar36 (Group) '' table CDD
+flush and close file /Users/jan/PychronDev/data/isotopes/8c/1d26fb-cb0e-4204-9732-58312a0f3dc4.h5
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+measuring signal. ncounts=400
+get handler cmd=GetIndicatorState R, 129.138.12.153,1061 3
+GetIndicatorState R ===>> False
+"signal" increment series count="2" fit count="1" regressing="True"
+change switch state (True, True)
+23:59:45 -- CLOSE  VALVE-R (Jan Inlet)
+-------------------------- close None (Jan Inlet) result=[(True, True)]
+action=close, ok=True, locked=[False]
+is_closed ('F',) {}
+is F () closed?
+is closed True
+open () {'description': 'CO2 Laser to Jan'}
+open name=--- desc=CO2 Laser to Jan
+checking ownership. requestor=129.138.12.150
+check software interlocks A
+interlocks []
+actuate state mode=None-script, software_lock=False
+doing actuation None-script open_channel False
+get handler cmd=Open A, 129.138.12.153,1061 3
+Open A ===>> OK
+get handler cmd=GetIndicatorState A, 129.138.12.153,1061 3
+GetIndicatorState A ===>> OK
+change switch state (True, True)
+23:59:45 -- OPEN   VALVE-A (CO2 Laser to Jan)
+-------------------------- open None (CO2 Laser to Jan) result=[(True, True)]
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+starting measurement
+action=open, ok=True, locked=[False]
+sleep (1,) {}
+SLEEP 1.0
+close () {'description': 'CO2 Laser to Roughing'}
+close name=--- desc=CO2 Laser to Roughing
+checking ownership. requestor=129.138.12.150
+check software interlocks G
+interlocks []
+actuate state mode=None-script, software_lock=True
+VALVE-G(CO2 Laser to Roughing) software locked
+change switch state (True, False)
+-------------------------- close None (CO2 Laser to Roughing) result=[(True, False)]
+action=close, ok=True, locked=[True]
+open () {'description': 'Microbone to Turbo'}
+open name=--- desc=Microbone to Turbo
+checking ownership. requestor=129.138.12.150
+check software interlocks U
+interlocks []
+actuate state mode=None-script, software_lock=False
+doing actuation None-script open_channel True
+get handler cmd=Open U, 129.138.12.153,1061 3
+Open U ===>> OK
+get handler cmd=GetIndicatorState U, 129.138.12.153,1061 3
+GetIndicatorState U ===>> OK
+change switch state (True, True)
+23:59:47 -- OPEN   VALVE-U (Microbone to Turbo)
+-------------------------- open None (Microbone to Turbo) result=[(True, True)]
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+action=open, ok=True, locked=[False]
+open () {'description': 'Microbone to Getter NP-10'}
+open name=--- desc=Microbone to Getter NP-10
+checking ownership. requestor=129.138.12.150
+check software interlocks M
+interlocks []
+actuate state mode=None-script, software_lock=False
+doing actuation None-script open_channel False
+get handler cmd=Open M, 129.138.12.153,1061 3
+Open M ===>> OK
+get handler cmd=GetIndicatorState M, 129.138.12.153,1061 3
+GetIndicatorState M ===>> OK
+change switch state (True, True)
+23:59:47 -- OPEN   VALVE-M (Microbone to Getter NP-10)
+-------------------------- open None (Microbone to Getter NP-10) result=[(True, True)]
+action=open, ok=True, locked=[False]
+open () {'description': 'Microbone to Getter D-50'}
+open name=--- desc=Microbone to Getter D-50
+checking ownership. requestor=129.138.12.150
+check software interlocks K
+interlocks []
+actuate state mode=None-script, software_lock=False
+doing actuation None-script open_channel False
+get handler cmd=Open K, 129.138.12.153,1061 3
+Open K ===>> OK
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetIndicatorState K, 129.138.12.153,1061 3
+GetIndicatorState K ===>> OK
+change switch state (True, True)
+23:59:48 -- OPEN   VALVE-K (Microbone to Getter D-50)
+-------------------------- open None (Microbone to Getter D-50) result=[(True, True)]
+action=open, ok=True, locked=[False]
+open () {'description': 'Microbone to CO2 Laser'}
+open name=--- desc=Microbone to CO2 Laser
+checking ownership. requestor=129.138.12.150
+check software interlocks T
+interlocks []
+actuate state mode=None-script, software_lock=False
+doing actuation None-script open_channel False
+get handler cmd=Open T, 129.138.12.153,1061 3
+Open T ===>> OK
+get handler cmd=GetIndicatorState T, 129.138.12.153,1061 3
+GetIndicatorState T ===>> OK
+change switch state (True, True)
+23:59:48 -- OPEN   VALVE-T (Microbone to CO2 Laser)
+-------------------------- open None (Microbone to CO2 Laser) result=[(True, True)]
+action=open, ok=True, locked=[False]
+open () {'description': 'Microbone to Inlet Pipette'}
+open name=--- desc=Microbone to Inlet Pipette
+checking ownership. requestor=129.138.12.150
+check software interlocks S
+interlocks []
+actuate state mode=None-script, software_lock=False
+doing actuation None-script open_channel False
+get handler cmd=Open S, 129.138.12.153,1061 3
+Open S ===>> OK
+get handler cmd=GetIndicatorState S, 129.138.12.153,1061 3
+GetIndicatorState S ===>> OK
+change switch state (True, True)
+23:59:49 -- OPEN   VALVE-S (Microbone to Inlet Pipette)
+-------------------------- open None (Microbone to Inlet Pipette) result=[(True, True)]
+action=open, ok=True, locked=[False]
+sleep (1,) {}
+SLEEP 1.0
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+set_resource () {'name': 'CO2PumpTimeFlag', 'value': 30}
+get handler cmd=Set CO2PumpTimeFlag 30, 129.138.12.153,1061 3
+Set CO2PumpTimeFlag 30 ===>> OK
+release ('JanCO2Flag',) {}
+release JanCO2Flag
+get handler cmd=Set JanCO2Flag 0, 129.138.12.153,1061 3
+Set JanCO2Flag 0 ===>> OK
+executed snippet estimated_duration=6.0, duration=5.97788310051
+PumpMicrobone.py completed successfully
+gosub finished
+get_resource_value () {'name': 'JanMiniboneFlag'}
+get handler cmd=Read JanMiniboneFlag, 129.138.12.153,1061 3
+Read JanMiniboneFlag ===>> 0
+Get Resource Value JanMiniboneFlag=0.0
+get resource value 0.0
+get_resource_value () {'name': 'JanMiniboneFlag'}
+get handler cmd=Read JanMiniboneFlag, 129.138.12.153,1061 3
+Read JanMiniboneFlag ===>> 0
+Get Resource Value JanMiniboneFlag=0.0
+executed snippet estimated_duration=4.0, duration=5.99155807495
+jan_pump_extraction_line.py completed successfully
+Post Equilibration Finished
+23:59:50 -- ******* Post Equilibration Finished *******
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+State checksums do not match. Local:610848153 Remote:-1891236928
+State checksum failed
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+set states for children of W. state=True
+refresh_canvas_needed fired
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+set states for children of W. state=False
+refresh_canvas_needed fired
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+00:00:11 -- collecting point 25
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+set states for children of W. state=True
+refresh_canvas_needed fired
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+00:00:37 -- collecting point 50
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+set states for children of W. state=False
+refresh_canvas_needed fired
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+set states for children of V. state=False
+refresh_canvas_needed fired
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+State checksums do not match. Local:855128171 Remote:1447832503
+State checksum failed
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+set states for children of H. state=True
+refresh_canvas_needed fired
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+00:01:03 -- collecting point 75
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.13369736689441547}"
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.1325501466290339}"
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.13222012890025486}"
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+State checksums do not match. Local:1447832503 Remote:855128171
+State checksum failed
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.13244932206311258}"
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+set states for children of C. state=True
+set states for children of B. state=True
+set states for children of H. state=False
+refresh_canvas_needed fired
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+State checksums do not match. Local:-344170657 Remote:1269278284
+State checksum failed
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+set states for children of D. state=True
+set states for children of Q. state=True
+set states for children of P. state=True
+refresh_canvas_needed fired
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.1316024828876815}"
+00:01:30 -- collecting point 100
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+set states for children of I. state=False
+refresh_canvas_needed fired
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.1312569459855}"
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.13084547130719962}"
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.13106152859890985}"
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.13077534386026785}"
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.1304887404293484}"
+00:01:56 -- collecting point 125
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.13037635864828437}"
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.1303062818655576}"
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.13018126011074338}"
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.1309765108412189}"
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.13066233740242186}"
+00:02:22 -- collecting point 150
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.1307665823031506}"
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.13107072470004819}"
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.13099996394406357}"
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.1309229039669745}"
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.13129814818193566}"
+00:02:49 -- collecting point 175
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.13163762177401925}"
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.1312952090443705}"
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.1315449058066486}"
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.13141515206057722}"
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.13153526145168074}"
+00:03:15 -- collecting point 200
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.13155029395632106}"
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.13172393107888525}"
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.1317998046393212}"
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.13155044132829083}"
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.131362859879859}"
+00:03:41 -- collecting point 225
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.13156621644631838}"
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.1318913063777187}"
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.13175910425854406}"
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.131695328058229}"
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.13169272847316477}"
+00:04:08 -- collecting point 250
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.13169338867789537}"
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.13168956974778986}"
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.13151291902426368}"
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.13137034477801687}"
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.13124191890603612}"
+00:04:34 -- collecting point 275
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.13131073664755694}"
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.13147866769698743}"
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.1313125119230692}"
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.1310897482673239}"
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.13107135643218865}"
+00:05:00 -- collecting point 300
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.13093541780007104}"
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.13078400624024375}"
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.13061675468029105}"
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.13051164571989474}"
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.13040072324160015}"
+00:05:27 -- collecting point 325
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.13033480175397952}"
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.13036370077601048}"
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.13029249615258165}"
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.13031619096631583}"
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.13032966530785742}"
+00:05:53 -- collecting point 350
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.13055404225653713}"
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.1306219366232357}"
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.13067208769682334}"
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.1307304879232563}"
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.13078408842938363}"
+00:06:19 -- collecting point 375
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.13077553514170795}"
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.13072205547182345}"
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.13064546441281555}"
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.13057050100293624}"
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08343661859798186}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.1304181795946119}"
+00:06:46 -- collecting point 400
+waiting for write to finish
+measurement finished
+estimated time: 419.430 actual time: :421.273
+flush and close file /Users/jan/PychronDev/data/isotopes/8c/1d26fb-cb0e-4204-9732-58312a0f3dc4.h5
+baselines () {'settling_time': 15.0, 'detector': 'H1', 'mass': 34.2, 'ncounts': 120}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Baseline
+build tables- baseline [Detector(H2), Detector(H1), Detector(AX), Detector(L1), Detector(L2), Detector(CDD)]
+add group baseline table H2
+add group baseline table H1
+add group baseline table AX
+add group baseline table L1
+add group baseline table L2
+add group baseline table CDD
+flush and close file /Users/jan/PychronDev/data/isotopes/8c/1d26fb-cb0e-4204-9732-58312a0f3dc4.h5
+detector Detector(H1)
+POSITION 34.2 H1
+Mapping mass to dac mass func: "parabolic"
+H1 map mass coeffs = [ -3.11428344e-04   1.33794662e-01   1.02875323e+00]
+H1 map mass to dac 34.2 >> 5.24027160773
+GetDeflection H1 ===>> 0
+GetHighVoltage ===>> 4499.94659342336
+positioning 34.2 (5.24024074826) on H1
+setting magnet DAC
+current  : 5.878125
+requested: 5.240241
+Delta Dac: 0.637885
+Checking detector protection. dv=0.63788
+Checking detector "CDD". Protection Threshold: 0.5 (V)
+ProtectDetector CDD,On ===>> OK
+GetDeflection CDD ===>> 2000
+Protected = 2000
+SetMagnetDAC 5.24024074826 ===>> OK
+Magnet settling time: 0.500 0.500
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+Magnet settling complete
+Wait for magnet to stop moving
+GetMagnetMoving ===>> True
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+GetMagnetMoving ===>> True
+GetMagnetMoving ===>> True
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+GetMagnetMoving ===>> True
+GetMagnetMoving ===>> True
+GetMagnetMoving ===>> True
+GetMagnetMoving ===>> True
+GetMagnetMoving ===>> True
+GetMagnetMoving ===>> True
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+GetMagnetMoving ===>> True
+GetMagnetMoving ===>> False
+Magnet move complete
+Unprotect detectors
+ProtectDetector CDD,Off ===>> OK
+GetDeflection CDD ===>> 50
+set_dac. change=True
+Delaying 15.0s for detectors to settle
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+Join finished
+measuring baseline. ncounts=120
+"baseline" increment series count="2" fit count="1" regressing="True"
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+starting measurement
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08803627170537187}"
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.07501075636732446}"
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08513211495197552}"
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08107787730686838}"
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08643032514996662}"
+00:07:31 -- collecting point 25
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08910990276958622}"
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08251895273264258}"
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08256560229164508}"
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.0783999130801012}"
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.07651698669440785}"
+00:07:57 -- collecting point 50
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.07956227790963828}"
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.07864466433619768}"
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.07753487380775326}"
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08018092833833215}"
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.07952873213910369}"
+00:08:23 -- collecting point 75
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.07997686486502306}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.13038332140080178}"
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08006814082461748}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.13038522154153676}"
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08065108157274264}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.1303835745854496}"
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08148389775582171}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.13038210283745685}"
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08228926588250231}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.13038227818628062}"
+00:08:50 -- collecting point 100
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.082449429557264}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.13037958388416152}"
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08237207323331111}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.13037985869425353}"
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08226417289665995}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.13038010939819714}"
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+testing H1<-5.0
+evaluate ot="H1.bs<-5.0" t="H1<-5.0", ctx="{'H1': 0.08183930416856444}"
+testing Ar36<0.001
+evaluate ot="Ar36.bs_corrected<0.001" t="Ar36<0.001", ctx="{'Ar36': 0.13038033903458243}"
+waiting for write to finish
+measurement finished
+estimated time: 125.829 actual time: :126.370
+flush and close file /Users/jan/PychronDev/data/isotopes/8c/1d26fb-cb0e-4204-9732-58312a0f3dc4.h5
+activate_detectors ('H1', 'AX', 'L2', 'CDD') {'peak_center': True}
+peak_center () {'detector': 'H1', 'integration_time': 0.262144, 'isotope': 'Ar40'}
+peak center: mean=165.505467043 threshold=5.0
+peak center started
+setup peak center. detector=['H1', 'AX', 'L2', 'CDD'], isotope=Ar40
+VersionedUnpickler [<apptools.sweet_pickle.versioned_unpickler.VersionedUnpickler object at 0x14a24b710>] using Updater [<apptools.sweet_pickle.updater.Updater object at 0x134415ad0>]
+VersionedUnpickler [<apptools.sweet_pickle.versioned_unpickler.VersionedUnpickler object at 0x14a24b710>] using Updater [<apptools.sweet_pickle.updater.Updater object at 0x134415ad0>]
+VersionedUnpickler [<apptools.sweet_pickle.versioned_unpickler.VersionedUnpickler object at 0x16352b6b0>] using Updater [<apptools.sweet_pickle.updater.Updater object at 0x134415ad0>]
+Mapping mass to dac mass func: "parabolic"
+H1 map mass coeffs = [ -3.11428344e-04   1.33794662e-01   1.02875323e+00]
+H1 map mass to dac 39.9624 >> 5.87816
+GetDeflection H1 ===>> 0
+GetHighVoltage ===>> 4499.94659342336
+do peak center. <pychron.spectrometer.jobs.peak_center.PeakCenter object at 0x1344159b0>
+doing pc
+starting peak center. center dac= 5.87812538407 step_width=0.001
+width = 0.001
+get scan parameters. half-width=0.015,window=0.015, i=0, scalar=1
+Scan parameters center=5.87813 width=0.03000 (5.86313 - 5.89313)
+Moving to starting dac 5.86312538407
+setting magnet DAC
+current  : 5.240241
+requested: 5.863125
+Delta Dac: 0.622885
+Checking detector protection. dv=0.62288
+Checking detector "CDD". Protection Threshold: 0.5 (V)
+ProtectDetector CDD,On ===>> OK
+GetDeflection CDD ===>> 2000
+Protected = 2000
+SetMagnetDAC 5.86312538407 ===>> OK
+Magnet settling time: 0.500 0.500
+Magnet settling complete
+Wait for magnet to stop moving
+GetMagnetMoving ===>> True
+GetMagnetMoving ===>> True
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+GetMagnetMoving ===>> True
+GetMagnetMoving ===>> True
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+GetMagnetMoving ===>> True
+GetMagnetMoving ===>> True
+GetMagnetMoving ===>> True
+GetMagnetMoving ===>> True
+GetMagnetMoving ===>> True
+GetMagnetMoving ===>> True
+GetMagnetMoving ===>> False
+Magnet move complete
+Unprotect detectors
+ProtectDetector CDD,Off ===>> OK
+GetDeflection CDD ===>> 50
+set_dac. change=True
+Wait until signal near baseline. tol= 0.0863161567856. timeout= 10
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+Peak center failed to move to a baseline position
+_do_sweep sm= 5.86312538407, em= 5.89312538407, stm= 0.001
+calculated step values: start=5.86312538407, end=5.89312538407, width=0.001, nsteps=31.0
+setting magnet DAC
+current  : 5.863125
+requested: 5.863125
+Delta Dac: 0.000000
+Checking detector protection. dv=0.00000
+Checking detector "CDD". Protection Threshold: 0.5 (V)
+SetMagnetDAC 5.86312538407 ===>> OK
+set_dac. change=False
+setting magnet DAC
+current  : 5.863125
+requested: 5.864160
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.5 (V)
+SetMagnetDAC 5.86415986683 ===>> OK
+Magnet settling time: 2.097 0.500
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+Magnet settling complete
+set_dac. change=True
+setting magnet DAC
+current  : 5.864160
+requested: 5.865194
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.5 (V)
+SetMagnetDAC 5.86519434958 ===>> OK
+Magnet settling time: 2.097 0.500
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+Magnet settling complete
+set_dac. change=True
+setting magnet DAC
+current  : 5.865194
+requested: 5.866229
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.5 (V)
+SetMagnetDAC 5.86622883234 ===>> OK
+Magnet settling time: 2.097 0.500
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+Magnet settling complete
+set_dac. change=True
+setting magnet DAC
+current  : 5.866229
+requested: 5.867263
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.5 (V)
+SetMagnetDAC 5.8672633151 ===>> OK
+Magnet settling time: 2.097 0.500
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+Magnet settling complete
+set_dac. change=True
+setting magnet DAC
+current  : 5.867263
+requested: 5.868298
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.5 (V)
+SetMagnetDAC 5.86829779786 ===>> OK
+Magnet settling time: 2.097 0.500
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+Magnet settling complete
+set_dac. change=True
+setting magnet DAC
+current  : 5.868298
+requested: 5.869332
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.5 (V)
+SetMagnetDAC 5.86933228062 ===>> OK
+Magnet settling time: 2.097 0.500
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+Magnet settling complete
+set_dac. change=True
+setting magnet DAC
+current  : 5.869332
+requested: 5.870367
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.5 (V)
+SetMagnetDAC 5.87036676338 ===>> OK
+Magnet settling time: 2.097 0.500
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+Magnet settling complete
+set_dac. change=True
+setting magnet DAC
+current  : 5.870367
+requested: 5.871401
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.5 (V)
+SetMagnetDAC 5.87140124614 ===>> OK
+Magnet settling time: 2.097 0.500
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+Magnet settling complete
+set_dac. change=True
+setting magnet DAC
+current  : 5.871401
+requested: 5.872436
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.5 (V)
+SetMagnetDAC 5.87243572889 ===>> OK
+Magnet settling time: 2.097 0.500
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+Magnet settling complete
+set_dac. change=True
+setting magnet DAC
+current  : 5.872436
+requested: 5.873470
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.5 (V)
+SetMagnetDAC 5.87347021165 ===>> OK
+Magnet settling time: 2.097 0.500
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+Magnet settling complete
+set_dac. change=True
+setting magnet DAC
+current  : 5.873470
+requested: 5.874505
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.5 (V)
+SetMagnetDAC 5.87450469441 ===>> OK
+Magnet settling time: 2.097 0.500
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+Magnet settling complete
+set_dac. change=True
+setting magnet DAC
+current  : 5.874505
+requested: 5.875539
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.5 (V)
+SetMagnetDAC 5.87553917717 ===>> OK
+Magnet settling time: 2.097 0.500
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+Magnet settling complete
+set_dac. change=True
+setting magnet DAC
+current  : 5.875539
+requested: 5.876574
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.5 (V)
+SetMagnetDAC 5.87657365993 ===>> OK
+Magnet settling time: 2.097 0.500
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+Magnet settling complete
+set_dac. change=True
+setting magnet DAC
+current  : 5.876574
+requested: 5.877608
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.5 (V)
+SetMagnetDAC 5.87760814269 ===>> OK
+Magnet settling time: 2.097 0.500
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+Magnet settling complete
+set_dac. change=True
+setting magnet DAC
+current  : 5.877608
+requested: 5.878643
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.5 (V)
+SetMagnetDAC 5.87864262545 ===>> OK
+Magnet settling time: 2.097 0.500
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+Magnet settling complete
+set_dac. change=True
+setting magnet DAC
+current  : 5.878643
+requested: 5.879677
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.5 (V)
+SetMagnetDAC 5.8796771082 ===>> OK
+Magnet settling time: 2.097 0.500
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+Magnet settling complete
+set_dac. change=True
+setting magnet DAC
+current  : 5.879677
+requested: 5.880712
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.5 (V)
+SetMagnetDAC 5.88071159096 ===>> OK
+Magnet settling time: 2.097 0.500
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+Magnet settling complete
+set_dac. change=True
+setting magnet DAC
+current  : 5.880712
+requested: 5.881746
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.5 (V)
+SetMagnetDAC 5.88174607372 ===>> OK
+Magnet settling time: 2.097 0.500
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+Magnet settling complete
+set_dac. change=True
+setting magnet DAC
+current  : 5.881746
+requested: 5.882781
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.5 (V)
+SetMagnetDAC 5.88278055648 ===>> OK
+Magnet settling time: 2.097 0.500
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+Magnet settling complete
+set_dac. change=True
+setting magnet DAC
+current  : 5.882781
+requested: 5.883815
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.5 (V)
+SetMagnetDAC 5.88381503924 ===>> OK
+Magnet settling time: 2.097 0.500
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+Magnet settling complete
+set_dac. change=True
+setting magnet DAC
+current  : 5.883815
+requested: 5.884850
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.5 (V)
+SetMagnetDAC 5.884849522 ===>> OK
+Magnet settling time: 2.097 0.500
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+Magnet settling complete
+set_dac. change=True
+setting magnet DAC
+current  : 5.884850
+requested: 5.885884
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.5 (V)
+SetMagnetDAC 5.88588400476 ===>> OK
+Magnet settling time: 2.097 0.500
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+Magnet settling complete
+set_dac. change=True
+setting magnet DAC
+current  : 5.885884
+requested: 5.886918
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.5 (V)
+SetMagnetDAC 5.88691848752 ===>> OK
+Magnet settling time: 2.097 0.500
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+Magnet settling complete
+set_dac. change=True
+setting magnet DAC
+current  : 5.886918
+requested: 5.887953
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.5 (V)
+SetMagnetDAC 5.88795297027 ===>> OK
+Magnet settling time: 2.097 0.500
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+Magnet settling complete
+set_dac. change=True
+setting magnet DAC
+current  : 5.887953
+requested: 5.888987
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.5 (V)
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+SetMagnetDAC 5.88898745303 ===>> OK
+Magnet settling time: 2.097 0.500
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+Magnet settling complete
+set_dac. change=True
+setting magnet DAC
+current  : 5.888987
+requested: 5.890022
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.5 (V)
+SetMagnetDAC 5.89002193579 ===>> OK
+Magnet settling time: 2.097 0.500
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+Magnet settling complete
+set_dac. change=True
+setting magnet DAC
+current  : 5.890022
+requested: 5.891056
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.5 (V)
+SetMagnetDAC 5.89105641855 ===>> OK
+Magnet settling time: 2.097 0.500
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+Magnet settling complete
+set_dac. change=True
+setting magnet DAC
+current  : 5.891056
+requested: 5.892091
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.5 (V)
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+SetMagnetDAC 5.89209090131 ===>> OK
+Magnet settling time: 2.097 0.500
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+Magnet settling complete
+set_dac. change=True
+setting magnet DAC
+current  : 5.892091
+requested: 5.893125
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.5 (V)
+SetMagnetDAC 5.89312538407 ===>> OK
+Magnet settling time: 2.097 0.500
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+Magnet settling complete
+set_dac. change=True
+result of _do_sweep=True
+result of _calculate_peak_center=([5.8702496325639597, 5.8780652638264854, 5.8858808950890102], [113.34975207407319, 154.86151641409913, 114.68351972518693], 5.8767726786561436, 154.86151641409913)
+Failed to find a valid peak. No peak greater than 1.0. max = 0.163862529592
+Failed to find a valid peak. No peak greater than 1.0. max = 0.113926648084
+new center pos Detector(H1) (Ar40) @ 5.87806526383
+GetHighVoltage ===>> 4499.94659342336
+GetDeflection H1 ===>> 0
+dac uncorrected for HV and deflection 5.87809987941
+update mftable H1 Ar40 5.87809987941 message=automated run peakcenter
+get initial guess parabolic
+get initial guess parabolic
+get initial guess parabolic
+get initial guess parabolic
+get initial guess parabolic
+get initial guess parabolic
+dump mftable to /Users/jan/PychronDev/setupfiles/spectrometer/mftables/mftable.csv
+add to repo msg=modified - automated run peakcenter
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+sweep finished
+locally archiving mftable
+setting magnet DAC
+current  : 5.893125
+requested: 5.878065
+Delta Dac: 0.015060
+Checking detector protection. dv=0.01506
+Checking detector "CDD". Protection Threshold: 0.5 (V)
+SetMagnetDAC 5.87806526383 ===>> OK
+Magnet settling time: 0.500 0.500
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+Magnet settling complete
+set_dac. change=True
+Failed to find a valid peak. No peak greater than 1.0. max = 0.163862529592
+Failed to find a valid peak. No peak greater than 1.0. max = 0.113926648084
+flush and close file /Users/jan/PychronDev/data/isotopes/8c/1d26fb-cb0e-4204-9732-58312a0f3dc4.h5
+finished measure script
+executed snippet estimated_duration=552.28, duration=663.91642499
+jan_unknown400_120.py completed successfully
+Measurement Finished
+00:10:30 -- ******* Measurement Finished *******
+Post Measurement Started jan_pump_ms.py
+00:10:30 -- ******* Post Measurement Started jan_pump_ms.py *******
+testing...
+no interpolation path defined
+executed snippet estimated_duration=0, duration=4.00543212891e-05
+Pumping spectrometer
+open () {'name': 'O'}
+open name=O desc=---
+checking ownership. requestor=129.138.12.150
+check software interlocks O
+interlocks []
+actuate state mode=None-script, software_lock=False
+doing actuation None-script open_channel True
+get handler cmd=Open O, 129.138.12.153,1061 3
+Open O ===>> OK
+get handler cmd=GetIndicatorState O, 129.138.12.153,1061 3
+GetIndicatorState O ===>> OK
+change switch state (True, True)
+00:10:30 -- OPEN   VALVE-O (Jan Ion Pump)
+-------------------------- open O () result=[(True, True)]
+action=open, ok=True, locked=[False]
+executed snippet estimated_duration=0, duration=0.367372989655
+jan_pump_ms.py completed successfully
+setting _ms_pumptime
+Post Measurement Finished
+00:10:31 -- ******* Post Measurement Finished *******
+$$$$$$$$$$$$$$$$$$$$ state at run end measurement
+state changed from measurement to success
+post measurement save measured=True aborted=False
+Set filtering
+setting fod for Ar41= {'filter_outliers': True, 'std_devs': 2, 'iterations': 1}
+setting fod for H2= {'filter_outliers': True, 'std_devs': 2, 'iterations': 1}
+setting fod for Ar40= {'filter_outliers': True, 'std_devs': 2, 'iterations': 1}
+setting fod for H1= {'filter_outliers': True, 'std_devs': 2, 'iterations': 1}
+setting fod for Ar36= {'filter_outliers': True, 'std_devs': 2, 'iterations': 1}
+setting fod for CDD= {'filter_outliers': True, 'std_devs': 10, 'iterations': 1}
+setting fod for Ar37= {'filter_outliers': True, 'std_devs': 2, 'iterations': 1}
+setting fod for L2= {'filter_outliers': True, 'std_devs': 2, 'iterations': 1}
+setting fod for Ar38= {'filter_outliers': True, 'std_devs': 2, 'iterations': 1}
+setting fod for L1= {'filter_outliers': True, 'std_devs': 2, 'iterations': 1}
+setting fod for Ar39= {'filter_outliers': True, 'std_devs': 2, 'iterations': 1}
+setting fod for AX= {'filter_outliers': True, 'std_devs': 2, 'iterations': 1}
+not connected to db mysql://janexp@129.138.12.160/labspy
+Enviromentals: {'lab_humiditys': [{'device': 'EnvironmentalMonitor',
+                    'name': 'Lab Hum.',
+                    'pub_date': '2017-09-07T00:04:52',
+                    'title': 'iServer Hum.',
+                    'value': 41.9}],
+ 'lab_pneumatics': [{'device': 'AirPressure',
+                     'name': 'Pressure',
+                     'pub_date': '2017-09-07T00:09:20',
+                     'title': None,
+                     'value': 95.175},
+                    {'device': 'AirPressure2',
+                     'name': 'Pressure2',
+                     'pub_date': '2017-09-07T00:09:21',
+                     'title': None,
+                     'value': 95.82508}],
+ 'lab_temperatures': [{'device': 'Coldfinger',
+                       'name': 'ColdFinger Temp.',
+                       'pub_date': '2017-09-06T23:38:30',
+                       'title': None,
+                       'value': -196.0},
+                      {'device': 'EnvironmentalMonitor',
+                       'name': 'Lab Temp.',
+                       'pub_date': '2017-09-06T22:53:54',
+                       'title': 'iServer Temp.',
+                       'value': 72.8},
+                      {'device': 'Chiller',
+                       'name': 'Coolant Temp.',
+                       'pub_date': '2017-09-06T23:57:22',
+                       'title': None,
+                       'value': 18.0}]}
+persistence save...
+persistence save - db
+post measurement save
+5639134480 connecting to database sqlite://@/
+connected to db sqlite://@/
+create new session 5639134480
+close session 5639134480
+No database instance. Not saving post measurement to isotopedb database
+$$$$$$$$$$$$$$$ auto_save_detector_ic=False
+massspec enabled True
+create new session 4969247184
+MassSpec Database Version: 16.0
+close session 4969247184
+saving post measurement to secondary database
+saving to massspec database 129.138.12.160/massspecdata
+setting labnumber to 65885
+setting aliquot to 12
+setting step to D
+setting uuid to 8c1d26fb-cb0e-4204-9732-58312a0f3dc4
+setting irradpos to 65885
+setting extract_device to Fusions CO2
+setting tray to 
+setting position to 143
+setting power_requested to 4.5
+setting extract_value to 4.5
+setting duration to 30.0
+setting duration_at_request to 30.0
+setting first_stage_delay to 30.0
+setting cleanup to 30.0
+setting comment to single crystal
+setting irradiation to NM-292
+setting level to C
+setting irradiation_level to C
+setting sample to BIT-245
+setting material to Anorthoclase
+setting project to BIT
+setting mass_spectrometer to Jan
+no attribute chron_dosages
+no attribute production_ratios
+no attribute interference_corrections
+no attribute production_name
+no attribute j
+Reference Isotope=Ar40
+Reference Detector=H1
+%%%%%%%%%%%%%%%%%%%% Comment: single crystal %%%%%%%%%%%%%%%%%%%
+adding isotope Ar41 H2
+add baseline dbdet= Ar41. original det= H2
+get baseline data Ar41 H2
+Get data baseline <pychron.processing.isotope.Baseline object at 0x1273932d0> len t=120
+baseline Ar41. v=-0.0911728939867, e=0.00300334045301
+get signal data Ar41 H2
+Get data signal Ar41 0.017+/-0.004 len t=400
+adding isotope Ar40 H1
+add baseline dbdet= Ar40. original det= H1
+get baseline data Ar40 H1
+Get data baseline <pychron.processing.isotope.Baseline object at 0x127393790> len t=120
+baseline Ar40. v=0.0834084638236, e=0.00350557076638
+get signal data Ar40 H1
+Get data signal Ar40 185.541+/-0.018 len t=400
+adding isotope Ar39 AX
+add baseline dbdet= Ar39. original det= AX
+get baseline data Ar39 AX
+Get data baseline <pychron.processing.isotope.Baseline object at 0x127393910> len t=120
+baseline Ar39. v=0.103615723749, e=0.0049439281337
+get signal data Ar39 AX
+Get data signal Ar39 11.344+/-0.011 len t=400
+adding isotope Ar38 L1
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+add baseline dbdet= Ar38. original det= L1
+get baseline data Ar38 L1
+Get data baseline <pychron.processing.isotope.Baseline object at 0x127393d90> len t=120
+baseline Ar38. v=-0.018827671805, e=0.00183006091669
+get signal data Ar38 L1
+Get data signal Ar38 0.1666+/-0.0024 len t=400
+adding isotope Ar37 L2
+add baseline dbdet= Ar37. original det= L2
+get baseline data Ar37 L2
+Get data baseline <pychron.processing.isotope.Baseline object at 0x127393350> len t=120
+baseline Ar37. v=0.00106458685065, e=0.00408032714966
+get signal data Ar37 L2
+Get data signal Ar37 0.126+/-0.005 len t=400
+adding isotope Ar36 CDD
+add baseline dbdet= Ar36. original det= CDD
+get baseline data Ar36 CDD
+Get data baseline <pychron.processing.isotope.Baseline object at 0x133e18e90> len t=120
+baseline Ar36. v=3.46138578123e-05, e=5.75163638817e-06
+get signal data Ar36 CDD
+Get data signal Ar36 0.1300+/-0.0007 len t=400
+65885-12D added analysis time 0.508177995682s
+analysis added to mass spec database
+mass spec save time= 0.519
+persistence save - dvc
+================= post measurement started
+create new session 4937330320
+close session 4937330320
+---------------- Experiment Queue saving disabled
+DVC saving peakcenter
+Failed to find a valid peak. No peak greater than 1.0. max = 0.163862529592
+Failed to find a valid peak. No peak greater than 1.0. max = 0.113926648084
+Smart pull ahead: 0 behind: 0
+Up-to-date with origin
+add to repo msg=modified - ad8224ebc6dbfeb9f5997218dfa5fe690569839d.json
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+add to repo msg=modified - 85-12D.json
+add to repo msg=modified - 85-12D.dat.json
+add to repo msg=modified - 85-12D.blan.json
+add to repo msg=modified - 85-12D.inte.json
+add to repo msg=modified - 85-12D.icfa.json
+add to repo msg=modified - 85-12D.base.json
+not at valid file /Users/jan/PychronDev/data/.dvc/repositories/Zimmerer/658/tags/85-12D.tags.json
+add to repo msg=modified - 85-12D.peak.json
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+add to repo msg=modified - 85-12D.extr.json
+not at valid file /Users/jan/PychronDev/data/.dvc/repositories/Zimmerer/658/monitor/85-12D.moni.json
+commit message=<COLLECTION>
+add to repo msg=modified - 85-12D.inte.json
+add to repo msg=modified - 85-12D.base.json
+commit message=<ISOEVO> default collection fits
+get handler cmd=GetValveLockStates, 129.138.12.153,1061 3
+get handler cmd=GetValveOwners, 129.138.12.153,1061 3
+add to repo msg=modified - 85-12D.blan.json
+commit message=<BLANKS> preceding bu-FC-J-8374
+add to repo msg=modified - 85-12D.icfa.json
+commit message=<ICFactor> default
+push repository <pychron.git_archive.repo_manager.GitRepoManager object at 0x1635b78f0>
+pushing to remote=origin, url=https://github.com
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+get handler cmd=GetStateChecksum A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z, 129.138.12.153,1061 3
+no changes to meta repo
+get handler cmd=GetValveStates, 129.138.12.153,1061 3
+create new session 4937330320
+add association Zimmerer
+get identifier "65885"
+setting analysis irradiation position=<pychron.dvc.dvc_orm.IrradiationPositionTbl object at 0x156089c90>
+close session 4937330320
+================= post measurement finished
+00:10:45 -- ******* Post Run Check *******
+loading queue conditionals post_run_actions
+loading system conditionals post_run_actions
+loading conditionals from /Users/jan/PychronDev/setupfiles/spectrometer/default_conditionals.yaml
+loading queue conditionals post_run_terminations
+loading system conditionals post_run_terminations
+loading conditionals from /Users/jan/PychronDev/setupfiles/spectrometer/default_conditionals.yaml
+Checking default post run terminations n=1
+GetDeflection CDD ===>> 50
+testing CDD==2000
+evaluate ot="CDD.deflection==2000" t="CDD==2000", ctx="{'CDD': 50.0}"
+00:10:45 -- ******* Post Run Check Passed *******
+00:10:45 -- Automated run 65885-12D success duration: 760.958 s
+----------------- finish -----------------
+----------------- stop -----------------
+retroactive repository identifiers disabled
+finish run. runs completed=33
+update duration runid=65885-12D, duration=760.957870007, md5=a5238c40
+loading script "jan_unknown400_120.py"
+loading script "jan_pump_ms.py"
+loading script "jan_co2.py"
+loading script "jan_pump_extraction_line.py"
+testing...
+no interpolation path defined
+executed snippet estimated_duration=539.8, duration=0.000389814376831
+script duration name:unknown400_120 seconds:540.0
+loading script "jan_unknown400_120.py"
+loading script "jan_pump_ms.py"
+loading script "jan_co2.py"
+loading script "jan_pump_extraction_line.py"
+testing...
+no interpolation path defined
+executed snippet estimated_duration=0, duration=2.71797180176e-05
+loading script "jan_unknown400_120.py"
+loading script "jan_pump_ms.py"
+loading script "jan_co2.py"
+loading script "jan_pump_extraction_line.py"
+testing...
+no interpolation path defined
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=0, duration=5.60283660889e-05
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=0, duration=0.000174999237061
+executed snippet estimated_duration=0.0, duration=0.00682902336121
+script duration name:co2 seconds:0.0
+loading script "jan_unknown400_120.py"
+loading script "jan_pump_ms.py"
+loading script "jan_co2.py"
+loading script "jan_pump_extraction_line.py"
+testing...
+no interpolation path defined
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=4.0, duration=0.000181913375854
+executed snippet estimated_duration=4.0, duration=0.0060510635376
+Script duration 540.0
+Run total estimated duration= 541.000
+unknown400_120 in script context. using previous estimated duration
+script duration name:unknown400_120 seconds:540.0
+pump_ms in script context. using previous estimated duration
+co2 in script context. using previous estimated duration
+script duration name:co2 seconds:0.0
+pump_extraction_line in script context. using previous estimated duration
+Script duration 540.0
+Run total estimated duration= 541.000
+script duration name:unknown400_120 seconds:540.0
+script duration name:co2 seconds:0.0
+Script duration 540.0
+Run total estimated duration= 541.000
+script duration name:unknown400_120 seconds:540.0
+script duration name:co2 seconds:0.0
+Script duration 540.0
+Run total estimated duration= 541.000
+script duration name:unknown400_120 seconds:540.0
+script duration name:co2 seconds:0.0
+Script duration 540.0
+Run total estimated duration= 541.000
+script duration name:unknown400_120 seconds:540.0
+script duration name:co2 seconds:0.0
+Script duration 540.0
+Run total estimated duration= 541.000
+script duration name:unknown400_120 seconds:540.0
+script duration name:co2 seconds:0.0
+Script duration 540.0
+Run total estimated duration= 541.000
+script duration name:unknown400_120 seconds:540.0
+script duration name:co2 seconds:0.0
+Script duration 540.0
+Run total estimated duration= 541.000
+script duration name:unknown400_120 seconds:540.0
+script duration name:co2 seconds:0.0
+Script duration 540.0
+Run total estimated duration= 541.000
+script duration name:unknown400_120 seconds:540.0
+script duration name:co2 seconds:0.0
+Script duration 540.0
+Run total estimated duration= 541.000
+script duration name:unknown400_120 seconds:540.0
+script duration name:co2 seconds:0.0
+Script duration 540.0
+Run total estimated duration= 541.000
+script duration name:unknown400_120 seconds:540.0
+script duration name:co2 seconds:0.0
+Script duration 540.0
+Run total estimated duration= 541.000
+script duration name:unknown400_120 seconds:540.0
+script duration name:co2 seconds:0.0
+Script duration 540.0
+Run total estimated duration= 541.000
+script duration name:unknown400_120 seconds:540.0
+script duration name:co2 seconds:0.0
+Script duration 540.0
+Run total estimated duration= 541.000
+script duration name:unknown400_120 seconds:540.0
+script duration name:co2 seconds:0.0
+Script duration 540.0
+Run total estimated duration= 541.000
+script duration name:unknown400_120 seconds:540.0
+script duration name:co2 seconds:0.0
+Script duration 540.0
+Run total estimated duration= 541.000
+script duration name:unknown400_120 seconds:540.0
+script duration name:co2 seconds:0.0
+Script duration 540.0
+Run total estimated duration= 541.000
+script duration name:unknown400_120 seconds:540.0
+script duration name:co2 seconds:0.0
+Script duration 540.0
+Run total estimated duration= 541.000
+script duration name:unknown400_120 seconds:540.0
+loading script "jan_unknown400_120.py"
+loading script "jan_pump_ms.py"
+loading script "jan_sniffair_x2.py"
+loading script "jan_pump_extraction_line.py"
+testing...
+no interpolation path defined
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=0, duration=4.60147857666e-05
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=0, duration=0.000149011611938
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=32.0, duration=0.000103950500488
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=34.0, duration=0.000121116638184
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=4.0, duration=8.20159912109e-05
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=36.0, duration=0.000118970870972
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=34.0, duration=0.000164031982422
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=4.0, duration=0.000102043151855
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=36.0, duration=0.000111103057861
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=70.0, duration=0.000120878219604
+executed snippet estimated_duration=250.0, duration=0.0363118648529
+script duration name:sniffair_x2 seconds:250.0
+Script duration 790.0
+Run total estimated duration= 791.000
+script duration name:unknown400_120 seconds:540.0
+sniffair_x2 in script context. using previous estimated duration
+script duration name:sniffair_x2 seconds:250.0
+Script duration 790.0
+Run total estimated duration= 791.000
+script duration name:unknown400_120 seconds:540.0
+loading script "jan_unknown400_120.py"
+loading script "jan_pump_ms.py"
+loading script "jan_cocktail_x1.py"
+loading script "jan_pump_extraction_line.py"
+testing...
+no interpolation path defined
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=0, duration=4.41074371338e-05
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=0, duration=0.000118970870972
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=32.0, duration=0.000152111053467
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=34.0, duration=0.000157117843628
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=4.0, duration=0.000105857849121
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=38.0, duration=0.000127077102661
+executed snippet estimated_duration=108.0, duration=0.0172870159149
+script duration name:cocktail_x1 seconds:108.0
+Script duration 648.0
+Run total estimated duration= 649.000
+script duration name:unknown400_120 seconds:540.0
+cocktail_x1 in script context. using previous estimated duration
+script duration name:cocktail_x1 seconds:108.0
+Script duration 648.0
+Run total estimated duration= 649.000
+nruns=22 before=5.0, run_dur=12618.0, btw=550.0
+write rem/ex queues
+/Users/jan/PychronDev/experiments/rem/CurrentExperiment.rem.txt
+/Users/jan/PychronDev/experiments/rem/CurrentExperiment.ex.txt
+doing event level: 3
+add run
