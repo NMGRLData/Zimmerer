@@ -1,16 +1,27 @@
 {
     "AX(CDD)": {
-        "error": 7.113871494239452e-06,
+        "error": 7.113870560308662e-06,
         "error_type": "SEM",
         "filter_outliers_dict": {
             "filter_outliers": true,
             "iterations": 1,
-            "std_devs": 2
+            "std_devs": 3,
+            "use_iqr_filtering": false,
+            "use_standard_deviation_filtering": false
         },
         "fit": "average",
+        "fn": 58,
+        "include_baseline_error": false,
         "modifier_error": 1.887177337389064e-05,
         "modifier_value": 0.00014033320725934868,
-        "value": 0.00016181662804946867
+        "n": 60,
+        "outlier_excluded": [
+            56,
+            42
+        ],
+        "reviewed": true,
+        "user_excluded": [],
+        "value": 0.00016181663146387014
     },
     "H1": {
         "error": 0.008844615592355463,
